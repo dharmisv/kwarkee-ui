@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registration-Page</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- For Mobile devices  -->
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+<!-- Css-->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/custom.css" />
+
+<!-- JavaScripts -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</head>
+
+<body>
+	<div class="container">
+    	
+        <!-- Header-->
+        <div class="row">
+        	<div class="span4">
+            	<img src="img/Logo.jpg" alt="Company Logo" />
+                Some tag line...
+            </div>
+            <div class="span8">              
+              <ul class="inline pull-right btn-to-left">
+                <li><a href="#">Help</a> <span class="divider"> | </span></li>
+             	<li><a href="#">How it Works</a></li>                
+              </ul>
+              
+              <div class="row">
+                  <div class="span8">                  		
+                  		<!--Hide Search Form on this page -->
+                  	  <!--<form action="" class="navbar-search">
+              			<input type="text" class="search-query" placeholder="Search..." />
+             		  </form>--> <!--End Hide -->
+                      <ul class="inline pull-right btn-to-left">
+                      
+                        <li><input type="button" value="Register" id="b-register" name="b-register" class="btn btn-success" /></li>  
+                        
+                        <li class="dropdown">
+                        	<a href="" class="dropdown-toggle btn btn-primary" data-toggle="dropdown">
+                            	<i class="icon-user"></i> Sign In <strong class="caret"></strong>
+                            </a>
+                            <div class="dropdown-menu b-padd">
+                            	<form action="" method="post"> 
+                                 
+                                	<div class="input-prepend">
+                                        <span class="add-on"><i class="icon-user"></i></span>                              	
+                                     <input type="text" id="b-username" name="b-username" placeholder="username" class="input-medium" />
+                                     </div>
+                                     
+                                     <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-key"></i></span>
+                                        <input type="password" id="b-password" name="b-password" placeholder="password" class="input-medium" />
+                                      </div> 
+                                     
+                                        
+                                     <label class="checkbox">
+										<input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
+									</label>
+                                        
+                                    <input type="submit" id="b-login" name="b-login" class="btn btn-primary" value="Login" />
+                                        
+                                </form>
+                            </div>
+                        </li>
+                      </ul>
+                   </div>
+              </div>
+           </div>               
+        </div><!-- End Of Header -->
+        
+        </div><!-- End Of Container -->
+        
+        
+        <!-- Center Part -->
+        <div class="container">
+           
+            <section>
+            
+	            <hr/>
+    	        <!--Register your new beemo -->
+        	    <div class="row">
+            	  <!--Registration Form-->
+                  <div class="span8">
+                  
+                  	<h1 class="reg-space">Register your new BEEMO account</h1>
+                    
+                    <p class="reg-space-mini"><span class="lead">1. Who are you ?</span><small><em>(resp. what kind of account do you need ?) </em></small> <input type="button" id="b-difference" name="b-difference" value="What's the difference ?" class="btn btn-info"/> </p>
+                    
+                    <ul class="inline text-center reg-space big-button">
+                    	<li>
+                        <input type="button" value="I'm an individual advertiser" class="btn btn-warning btn-large" id="b-individual-plan" name="b-individual-plan" />  </li>
+                        <li><span class="lead muted">Or</span></li>
+                        <li>
+                        <input type="button" value="We're a brand/firm/agency" class="btn btn-warning btn-large" id="b-firm-plan" name="b-firm-plan" />  					                        </li>
+                    </ul>
+                    
+                    <hr/>
+                    <p><span class="lead">2. Your profile data:</span></p>
+                    
+	                <ul class="inline text-center big-button">
+                    	<li>
+	                  	    <input type="button" value="enter manually" class="btn btn-info btn-large" id="b-manual" name="b-manual" />
+                        </li>
+                        <li>
+	                  	   <span class="lead muted"> or connect with</span>
+                        </li>
+                        <li class="reg-space top-some">
+                        	<a href="" class="btn btn-info"><i class="icon-facebook-sign"></i> Facebook</a>
+                            <a href="" class="btn btn-info"><i class="icon-linkedin-sign"></i> LinkedIn</a>
+                            <!-- I have created button with anchor tag as well as input type use which ever you want-->
+	                  	    <!--<input type="button" value="Facebook" class="btn btn-info btn-large" id="b-facebbok" name="b-facebook" />
+                            <input type="button" value="LinkedIn" class="btn btn-info btn-large" id="b-linkedin" name="b-linkedin" />-->
+                        </li>
+                    </ul>
+                    
+                    <div class="reg-space reg-padd-left" >
+                    <form>
+                    	<label for="b-frm-username">Usrname/Business name</label>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-user"></i></span>                              	
+                               <input type="text" class="input-xlarge" id="b-frm-username" name="b-frm-username"/>
+                        </div>
+                        
+                        <label for="b-frm-location">Location/Base</label>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-location-arrow"></i></span>                              	
+                               <input type="text" class="input-xlarge" id="b-frm-location" name="b-frm-location"/>
+                        </div>
+                        
+                        
+                        
+                        <label for="b-frm-location">Email <small><em>(won't be visible to anybody at anytime) </em></small> </label>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-envelope"></i></span>                              	
+                               <input type="email" class="input-xlarge" id="b-frm-location" name="b-frm-location"/>
+                        </div>
+                        
+                        
+                        <label for="b-frm-password">Password</em></small> </label>
+                        <div class="input-prepend ">
+                            <span class="add-on"><i class="icon-key"></i></span>                              	
+                               <input type="password" class="input-xlarge" id="b-frm-password" name="b-frm-password"/>
+                        </div>
+                        
+                        <div class="reg-space-top">                        	
+	                        <input type="submit" class="btn btn-success" id="b-frm-submit" name="b-frm-submit" value="create account!"/>
+                        </div>
+                    </form>
+                    </div>
+                        
+                  </div>  <!--End Of Registration... -->
+                  
+                  
+                  <!--Side bar Image -->
+                  <div class="span4 teaser-img">
+                  	<img src="img/Teaser.jpg" alt="Teaser" />
+                  </div><!--End Side bar Image -->	
+                  
+            	</div><!--End Register your... -->
+            </section>
+       	 
+        <hr/>        
+        
+        <!--Footer -->
+        <div class="row">
+        	<h4 class="text-center">Our Partners</h4>
+        	<div class="span12 b-img-spc">
+            	<img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-circle" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+            </div>	
+        </div><!--End Footer -->
+        
+	</div><!--End Container -->
+</body>
+
+</html>
