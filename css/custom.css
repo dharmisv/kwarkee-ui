@@ -38,11 +38,13 @@
 .profile-img-align img{margin-left:15px;}
 .profile-img-align input{margin:10px 0 6px 30px;}
 
-.profile-rate{ position:relative;}
+.profile-rate{ position:relative; margin-bottom:1em;}
 .rated{position:absolute; }
 .rated ul{ margin-left:3em;}
 .rated-capacity{position:absolute;}
 .rated-capacity ul{margin-left:3em;}
+/* a */
+.campg-count{display:block;text-align:center;}
 
 /*..::-End Profile Page-::*/
 
@@ -77,6 +79,9 @@
 		margin-left: 140px;
 	}
 	.paypa-form #b-add-bank{margin-left:145px;}
+	
+	/* a */
+	.campg-count{display:block;text-align:left!important; padding-left:1em;}
 	/*..::-End Profile Page-::*/
 
 }
@@ -98,12 +103,11 @@
 	
 	
 	/*..::-Profile Page-::*/
-	.profile-rate{ position:relative; margin-top:1em;margin-left:1.2em;}
+	.profile-rate{ position:relative; margin-top:1em;margin-left:1.2em;margin-bottom:2em;}
 	.profile-img-align{ margin-top:10px;}
 	.rated ul{ margin-left:1.5em;}
 	.rated-capacity ul{margin-left:1.5em;}
 	.b-left ul{margin-top:0px; margin-left:0px;}
-	
 	.paypa-form > .form-horizontal .control-label 
 	{
 		text-align: left;
@@ -115,6 +119,8 @@
 		margin-left: 0px;
 	}
 	.paypa-form #b-add-bank{margin-left:0px;}
+	/* a */
+	.campg-count{display:block;text-align:left!important; padding-left:3em;}
 	/*..::-End Profile Page-::*/
 }
 
