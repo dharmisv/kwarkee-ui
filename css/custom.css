@@ -46,6 +46,9 @@
 /* a */
 .campg-count{display:block;text-align:center;}
 
+/*3b*/
+#change-picture-3b{margin-top:1em;}
+
 /*..::-End Profile Page-::*/
 
 
@@ -82,6 +85,9 @@
 	
 	/* a */
 	.campg-count{display:block;text-align:left!important; padding-left:1em;}
+	
+	/*3b*/
+	#change-picture-3b{margin-top:1em;}
 	/*..::-End Profile Page-::*/
 
 }
@@ -121,6 +127,8 @@
 	.paypa-form #b-add-bank{margin-left:0px;}
 	/* a */
 	.campg-count{display:block;text-align:left!important; padding-left:3em;}
+	
+	/*3b*/
 	/*..::-End Profile Page-::*/
 }
 
@@ -149,6 +157,9 @@
 	/*..::-Profile Page-::*/
 	.profile-img-align{ margin-top:10px;}	
 	.b-left ul{margin-top:0px; margin-left:0px;}
+	
+	/*3b*/
+	
 	/*..::-End Profile Page-::*/
 }
 
