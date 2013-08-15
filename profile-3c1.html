@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Profile-3c1(Edit/Create Campaign)-Page</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- For Mobile devices  -->
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+<!-- Css-->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/custom.css" />
+
+<!-- JavaScripts -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</head>
+
+<body>
+	<div class="container">
+    	
+        <!-- Header-->
+        <div class="row">
+        	<div class="span4">
+            	<img src="img/Logo.jpg" alt="Company Logo" />
+                Some tag line...
+            </div>
+            <div class="span8">              
+              <ul class="inline pull-right btn-to-left">
+                <li><a href="#">Help</a> <span class="divider"> | </span></li>
+             	<li><a href="#">How it Works</a></li>                
+              </ul>
+              
+              <div class="row">
+                  <div class="span8">                  		                  		
+                  	  <form action="" class="navbar-search">
+              			<input type="text" class="search-query" placeholder="search campaigns" />
+             		  </form>
+                      <ul class="inline pull-right btn-to-left">                      
+                        <li>
+                        	<div class="btn-group">
+                            	<button class="btn">Frank Deering</button>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                	<span class="caret"></span>
+                               	</button>
+                                 	<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
+                                	    <li><a href="#">Settings</a></li>
+                                        <li><a href="#">logout</a></li>
+                                    </ul>
+                            </div>                        	
+                        </li>
+                      </ul>
+                   </div>
+              </div>
+           </div>               
+        </div><!-- End Of Header -->
+        
+        </div><!-- End Of Container -->
+        
+        <!--Moody, Text and Search box  -->
+        <div class="container">
+        	<section>
+            	<div class="row b-head-mood">
+                	<div class="span12">
+                    	<h1>Edit/Create <strong>Campaigns</strong></h1>
+                    </div>	
+                </div>
+            </section>	
+        </div><!--End Moody -->
+        
+        
+        <!-- Profile Details -->
+        <div class="container">
+           
+            <section>            
+	           
+    	        <!--All-->
+        	    <div class="row">
+                
+                  <!--Left Side Links-->
+                  <div class="span3">    
+                  	<div class="b-left">              	
+                       <ul class="nav nav-list">                        
+                        <li><a href="#"><i class="icon-anchor"></i> Dashboard</a></li>
+                        <li class="active"><a href="#"><i class="icon-fire"></i> My Campaigns</a></li>                       
+                        <li><a href="#"><i class="icon-hand-right"></i> Pledges</a></li>
+                        <li><a href="#"><i class="icon-envelope-alt"></i> Messages</a></li>                       
+                       </ul>           
+                       <span class="campaigns-all label">1</span>         
+                       <span class="pledges-all label">2</span>         
+                       <span class="messages-all label">3</span>      
+                    </div>
+                  </div>  <!--End Of Left Side... -->
+                  
+            	  <!--Edit / Create Campaigns -->
+                  <div class="span7"> 
+                   
+                   <a href="#" class="btn btn-warning"><i class="icon-arrow-left"></i> back to campaign overview</a>
+                  	<!--<input type="button" id="back-overview-3c1" name="back-overview-3c1" class="btn btn-inverse" value="back to campaign overview"/>-->
+                    <input type="button" id="delete-campaign-3c1" name="delete-campaign-3c1" class="btn btn-danger pull-right" value="delete campaign"/>
+                    <hr/>
+                    
+                    <form action="" method="post">
+                    	<div class="row">
+                        
+                        	<div class="span4">
+                            	<span class="lead">Campaign title</span>
+                                <input type="text" id="camp-title-3c1" name="camp-title-3c1" class="input-block-level" />
+                                
+                                Description of your campaign(what do you offer/look for ?)
+                                <textarea id="camp-desc-3c1" name="camp-desc-3c1" class="input-block-level" rows="12" ></textarea>                            	
+                            </div><!--End Span 4 -->
+                                
+                                
+                            <div class="span3">
+	                            
+                                <span class="lead">Overview image</span>
+                                
+                                <div class="well">                                
+	                            	<ul class="unstyled">
+                                   		<li>
+        	                            	<small >This image will show in search resultsand thereforeis a very important teaser for your campaign</small>
+    	                                </li>
+                                    	<li class="text-right">
+                                        	<img src="img/PicOverview.jpg" alt="Pic Overview Image" />
+                                        </li>
+                                        <li>
+                                        	<small>supported files have to be a *.jpg, *.gif or *.png and shouldn't be bigger than 3MB</small>
+                                        </li>
+                                        <li>
+                                         	<input type="button" id="pick-image-3c1" name="pick-image-3c1" class="btn btn-success" value="pick overvie image" />
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div> <!--End Span 3 -->
+                            
+                          
+                            <!--Price and duration -->                       
+                            <!--<div class="row">-->                                                        
+                                <div class="span2">
+                                    <div class=" input-prepend input-append">
+                                        <span class="add-on">Price:</span>
+                                            <input type="number" id="price-3c1" name="price-3c1" min="1" value="1"  class="span1"/>
+                                        <span class="add-on"><i class="icon-dollar"></i></span>
+                                    </div>
+                                </div>
+                                <div class="span2">
+                                    <select id="type-3c1" name="type-3c1" class="span2">
+                                        <option>Fixed price</option>
+                                        <option selected>Per Day</option>                                    
+                                    </select>
+                                </div>
+                                <div class="break-line span3">
+                                     <div class=" input-prepend input-append duration-padd">
+                                        <span class="add-on">Campaign duration:</span>
+                                            <input type="number" id="price-3c1" name="price-3c1" min="1" value="1"  class="span1"/>
+                                        <span class="add-on">days</span>
+                                    </div>
+                                </div> 
+                           <!--</div>--><!--End Price and...-->    
+                           
+                           <!--<div class="row">-->
+                               <div class="span7">
+                               <hr/>
+                                    <div class="input-prepend">
+                                        <span class="add-on"><strong>category:</strong></span>
+                                        <select id="camp-category-3c1" name="camp-category-3c1" class="span2">
+                                            <option selected>Sponsoring</option>
+                                            <option>Suggested</option>
+                                            <option>Referemced</option>
+                                        </select>
+                                    </div>	
+                                    
+                                    <div class="input-prepend">
+                                    	<span class="add-on"><strong>campaign-reach:</strong></span>
+                                        <select id="camp-reach-3c1" name="camp-reach-3c1" class="span2">
+                                        	<option selected>Local</option>
+                                            <option>State</option>
+                                            <option>National</option>
+                                            <option>International</option>
+                                        </select>
+                                    </div>
+                               	
+                               		<div class="well optnal-show-3c1"> <!--Hide or show based on option selected above -->
+                                    	<small class="absolute-3c1 label">Where is the origin of your campaign ?</small>
+                                        <div class="input-prepend">
+                                        	<span class="add-on"><strong>Zip:</strong></span>
+	                                        <input type="text" id="camp-zip-3c1" name="camp-zip-3c1" class="span2" />
+                                        </div>
+                                        <div class="input-prepend">
+                                        	<span class="add-on"><strong>City:</strong></span>
+	                                        <input type="text" id="camp-city-3c1" name="camp-city-3c1" class="span3" />
+                                        </div>                                        
+                                    </div><!-- End Hide or show... -->
+                               <hr/>
+                               <!--</div>-->                                
+                           </div>
+                           
+                           
+                           <div class="span3">
+                            	<strong class="lead">Campaign video (optional)</strong>	                                
+                                	<div class="spac-3c1-top">
+		                                <label for="video-title-3c1"> displayed title of your video</label>
+    	                                <input type="text" id="video-title-3c1" name="video-title-3c1" class="input-block-level" />
+                                    </div>
+                                    <div class="spac-3c1-top">
+	                                    <label>URL of video (youtube or vimeo)</label>
+    	                                <input type="text" id="video-url-3c1" name="video-url-3c1" class="input-block-level"/>
+                                    </div>
+                                
+                            </div>
+                            <div class="span4">
+                            	<video src="../Video Test For HTML5/Pokemon Season 10 Episode 1 English Sub.mp4" preload="auto" class="span4 pull-left" controls>
+                                
+                                </video>
+                            </div>       
+                            
+                            <div class="span7">
+                         		<hr/>
+                                <div class="clearfix">
+                               	 	<label for="camp-pictures-3c1"> Campaign picture(s) </label>
+                                	<p class="span3 pull-left">
+                                		You can upload one or more pictures(*.jpg,*.gif,*.png)<br/>
+                                		<small class="muted">(max 5 pictures. Note that they will be resized to fit 800x425px)</small>
+                               		</p>
+                                	<input type="button" id="camp-pictures-3c1" name="camp-pictures-3c1" class="btn btn-success pull-right span4" value="pick image(s) to upload"  />
+                                </div>	
+                                <div class="well">
+                                	<ul class="inline">
+                                    	<li class="real-img-view">
+                                        	<img src="img/Uploaded-pics-view.jpg" alt="Uploaded Preview" />
+                                            <span class="btn btn-danger btn-mini vvw-abs"><i>X</i></span>
+                                        </li>
+                                        <li class="real-img-view">
+                                        	<img src="img/Uploaded-pics-view.jpg" alt="Uploaded Preview" />
+                                            <span class="btn btn-danger btn-mini vvw-abs"><i>X</i></span>
+                                        </li>
+                                        <li class="real-img-view">
+                                        	<img src="img/Uploaded-pics-view.jpg" alt="Uploaded Preview" />
+                                            <span class="btn btn-danger btn-mini vvw-abs"><i>X</i></span>
+                                        </li>
+                                        <li class="real-img-view">
+                                        	<img src="img/Uploaded-pics-view.jpg" alt="Uploaded Preview" />
+                                            <span class="btn btn-danger btn-mini vvw-abs"><i>X</i></span>
+                                        </li>
+                                    </ul>	
+                                </div>
+                                <hr/>
+	                        </div>   
+                             
+                           <div class="span7">
+                           		<input type="submit" value="save / create campaign" id="profile-3c1-save" name="profile-3c1-save" class="btn btn-large btn-success pull-right" />
+                               
+                           </div>
+                           <div class="clearfix span7">
+                           <hr/>
+                           </div>
+                            
+                        </div><!--End row -->
+                        
+                        
+                    </form>
+                    
+                  </div>  <!--End Of Edit / Create... -->
+                 
+                  
+                  <!--Side bar Profile-->
+                  <div class="span2">
+                  	<div class="profile-img-align">                   	
+		                <img src="img/profile-pic.jpg" alt="My Profile Pic"/>                        
+                        <input type="button" class="btn" value=" my profile " />
+                        <div class="profile-rate">
+                        	<div class="rated">
+                            	<ul class="inline">
+                                	<li>
+                                    	<i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star-half"></i>
+                                    </li>
+                                </ul>                                
+                            </div>
+                            <div class="rated-capacity">
+                            	<ul class="inline">
+                                	<li>
+                                    	<i class="icon-star-empty"></i>
+                                        <i class="icon-star-empty"></i>
+                                        <i class="icon-star-empty"></i>
+                                        <i class="icon-star-empty"></i>
+                                        <i class="icon-star-empty"></i>
+                                    </li>
+                                    
+                                </ul>  
+                            </div>                        	
+                        </div>
+                        
+                        <!--Campaigns -->
+                        <div class="campg-count">
+                        	<small><em>(7 campaigns)</em></small>
+                        </div><!-- -->
+                    </div>
+                  </div><!--End Side bar Profile-->	
+                  
+            	</div><!--End Profile Details... -->
+            </section>
+       	 
+        <hr/>        
+        
+        <!--Footer -->
+        <div class="row">
+        	<h4 class="text-center">Our Partners</h4>
+        	<div class="span12 b-img-spc">
+            	<img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-circle" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+            </div>	
+        </div><!--End Footer -->
+        
+	</div><!--End Container -->
+</body>
+
+</html>

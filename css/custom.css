@@ -7,7 +7,7 @@
 .b-moody-background{padding:2em 0; background:url(../img/Background-1170.jpg) no-repeat scroll top right; margin:0 auto; }
 .b-padd{ padding:0.5em 1em;left:auto; right:0;}
 .b-relateive{position:relative;}
-.b-absolute{position:absolute; top:-8px; right:40px; min-width:50px; text-align:center;}
+.b-absolute{position:absolute; top:-8px; left: 45%; min-width:50px; text-align:center;}
 .b-absolutebotmrght{position:absolute; bottom:-14px; right:15px; min-width:120px; text-align:center;}
 .b-absolutebotmrght2{position:absolute; bottom:-14px; left:40px; min-width:240px; text-align:center;}
 
@@ -43,11 +43,30 @@
 .rated ul{ margin-left:3em;}
 .rated-capacity{position:absolute;}
 .rated-capacity ul{margin-left:3em;}
+
+/*..::Small Dots for Indication on each Menu button::..*/
+.campaigns-all{position:absolute; left: 70%; top: 29%;}
+.pledges-all{position:absolute;  left: 70%; top: 52%;}
+.messages-all{position:absolute;  left: 70%; top: 79%;}
+/*..::-End Of Small Dots...-::..*/
+
 /* a */
 .campg-count{display:block;text-align:center;}
 
 /*3b*/
 #change-picture-3b{margin-top:1em;}
+
+/*3c*/
+.campaign-3c{position:relative;}
+.campaign-3c .label{ position:absolute; top:-7px; left:50%;}
+
+/*3c1*/
+.duration-padd{padding-left:0%;}
+.optnal-show-3c1{position:relative; margin-top:1em;}
+.absolute-3c1{position:absolute; top:-10px;}
+.spac-3c1-top{margin-top:2em;}
+.real-img-view{position:relative;}
+.real-img-view .vvw-abs{position:absolute; top:0; right:5px;}
 
 /*..::-End Profile Page-::*/
 
@@ -83,11 +102,26 @@
 	}
 	.paypa-form #b-add-bank{margin-left:145px;}
 	
+	/*..::Small Dots for Indication on each Menu button::..*/
+	.campaigns-all{position:absolute; left: 90%; top: 29%;}
+	.pledges-all{position:absolute;  left: 90%; top: 52%;}
+	.messages-all{position:absolute;  left: 90%; top: 79%;}
+	/*..::-End Of Small Dots...-::..*/
+
+	
 	/* a */
 	.campg-count{display:block;text-align:left!important; padding-left:1em;}
 	
 	/*3b*/
 	#change-picture-3b{margin-top:1em;}
+	
+	/*3c*/
+	.campaign-3c .label{ position:absolute; top:-7px; left:65%;}
+	
+	/*3c1*/
+	.duration-padd{padding-left:0%;}
+
+
 	/*..::-End Profile Page-::*/
 
 }
@@ -98,7 +132,7 @@
 	.b-equal-margin{margin-top:2em;}
 	.btn-to-left{float: none;}
 	ul.btn-to-left{margin-top:1em;}
-	.b-absolute{position:absolute; top:-8px; right:310px; min-width:50px; text-align:center;}
+	.b-absolute{position:absolute; top:-8px; left: 18%; min-width:50px; text-align:center;}
 	.b-absolutebotmrght{position:absolute; bottom:-14px; right:12px; min-width:120px; text-align:center;}
 	.b-absolutebotmrght2{position:absolute; bottom:-14px; left:12px; min-width:120px; text-align:center;}
 	
@@ -129,6 +163,9 @@
 	.campg-count{display:block;text-align:left!important; padding-left:3em;}
 	
 	/*3b*/
+	
+	/*3c*/
+	.campaign-3c .label{ position:absolute; top:-7px; left:19%;}
 	/*..::-End Profile Page-::*/
 }
 
@@ -140,7 +177,7 @@
 	.btn-to-left{float: none;}
 	ul.btn-to-left{margin-top:1em;}
 	
-	.b-absolute{position:absolute; top:-8px; right:310px; min-width:50px; text-align:center;}
+	.b-absolute{position:absolute; top:-8px; left: 30%; min-width:50px; text-align:center;}
 	.b-absolutebotmrght{position:absolute; bottom:-14px; right:12px; min-width:120px; text-align:center;}
 	.b-absolutebotmrght2{position:absolute; bottom:-14px; left:12px; min-width:120px; text-align:center;}
 	
@@ -159,6 +196,12 @@
 	.b-left ul{margin-top:0px; margin-left:0px;}
 	
 	/*3b*/
+	
+	/*3c*/
+	.campaign-3c .label{ position:absolute; top:-7px; left:30%;}
+	
+	/*3c1*/
+	.break-line .input-append, .input-prepend {white-space: normal;}
 	
 	/*..::-End Profile Page-::*/
 }
