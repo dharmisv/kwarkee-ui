@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Browse-4b-Page</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- For Mobile devices  -->
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+<!-- Css-->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/custom.css" />
+
+<!-- JavaScripts -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function() 
+	{
+      //  $('.carousel').carousel({interval:5000});
+    });
+</script>
+</head>
+
+<body>
+	<div class="container">
+    	
+        <!-- Header-->
+        <div class="row">
+        	<div class="span4">
+            	<img src="img/Logo.jpg" alt="Company Logo" />
+                Some tag line...
+            </div>
+            <div class="span8">              
+              <ul class="inline pull-right btn-to-left">
+                <li><a href="#">Help</a> <span class="divider"> | </span></li>
+             	<li><a href="#">How it Works</a></li>                
+              </ul>
+              
+              <div class="row">
+                  <div class="span8">                  		                  		
+                  	  <!--<form action="" class="navbar-search">
+              			<input type="text" class="search-query" placeholder="Search..." />
+             		  </form>-->
+                      <ul class="inline pull-right btn-to-left">                      
+                        <li>
+                        	<div class="btn-group">
+                            	<button class="btn">Frank Deering</button>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                	<span class="caret"></span>
+                               	</button>
+                                 	<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
+                                	    <li><a href="#">Settings</a></li>
+                                        <li><a href="#">logout</a></li>
+                                    </ul>
+                            </div>                        	
+                        </li>
+                      </ul>
+                   </div>
+              </div>
+           </div>               
+        </div><!-- End Of Header -->
+        
+        </div><!-- End Of Container -->
+        
+        <!--Moody, Text and Search box  -->
+        <div class="container">
+        	<section>
+            	<div class="row b-head-mood">
+                	<div class="span12">
+                    	<form action="">
+                        	<div class="input-append input-prepend">
+                            	<span class="add-on"><i class="icon-search"></i></span>
+                            	<input type="text" id="browse-search-inpt" name="browse-search-inpt" class="input-large" placeholder="enter search phrase" />						
+                                <input type="submit" class="btn btn-info" value="find!" />
+                            </div>
+                        </form>
+                    </div>	
+                </div>
+            </section>	
+        </div><!--End Moody -->
+        
+        
+        <!-- Campaign Browse-->
+        <div class="container">
+           
+            <section>            
+	           
+    	        <!--All-->
+        	    <div class="row">                
+                 
+                 	<div class="span3">
+                    	<div class="padd-browse-leftcontent">   
+                                             	
+                            <form action="" method="" class="moveup">                        	
+                            	<p class="well well-small">
+                                    Are you looking for <strong>cmapaigns</strong> or <strong> offers ?</strong>
+                                    <br/>
+                                	<select id="browse-looking-for" name="browse-looking-for" class="margin-top-browse input-medium">
+                                    	<option>cmapaigns</option>
+                                      	<option>offers</option>
+                                        <option selected>both</option>
+                                    </select>
+                                </p> 
+                                
+                                <div class="well well-small">                            
+	                            	<h3>Filters</h3>
+    	                            <hr/>
+                                
+        	                        <h4><strong>price</strong></h4>
+            	                    <div class="input-prepend input-append">
+                	                	<span class="add-on">from</span>
+                    	                <input type="text" id="from-price" name="from-price" class="input-small" />
+                        	            <span class="add-on"><i class="icon-dollar"></i></span>
+                            	    </div>
+                                	<div class="input-prepend input-append">
+                                		<span class="add-on">to</span>
+                                    	<input type="text" id="to-price" name="to-price" class="input-small" />
+                                    	<span class="add-on"><i class="icon-dollar"></i></span>
+                                	</div>
+                                	<hr/>
+                                
+                                	<h4><strong>Reach</strong></h4>
+                               	 	<select id="browse-reach" name="browse-reach" class="input-medium">
+                                		<option selected>city-wide</option>
+                                    	<option>state-wide</option>
+                                    	<option>nation-wide</option>
+                                	</select>
+                                	<hr/>
+                                
+                                	<h4><strong>Location</strong></h4>
+                                	<div class="input-prepend">
+                                		<span class="add-on">near</span>
+                                    	<input type="text" id="browse-near" name="browse-near" class="input-small"/>
+                                	</div>
+                                	<hr/>
+                                
+                                	<h4>Author rating</h4>
+                                	<div class="input-prepend">
+                                		<span class="add-on">at least</span>
+                                    	<select id="browse-author-rate" name="browse-author-rate" class="input-medium">
+                                       		<option selected>1 star</option>
+                                        	<option>2 star</option>
+                                        	<option>3 star</option>
+                                        	<option>4 star</option>
+                                        	<option>5 star</option>
+                                    	</select>
+                                	</div>
+                                	<hr/>
+                                
+                                	<h4>Duration</h4>
+                                	<div class="input-prepend input-append">
+                                		<span class="add-on">from</span>
+                                		<input type="text" id="browse-duratn-from" name="browse-duratn-from" class="input-small"/>
+                                    	<span class="add-on">days</span>
+                                	</div>
+                                	<div class="input-prepend input-append">
+                                		<span class="add-on">to</span>
+                                		<input type="text" id="browse-duratn-to" name="browse-duratn-to" class="input-small"/>
+                                    	<span class="add-on">days</span>
+                                	</div>
+                                	<hr/>                                
+                                <input type="submit" id="browse-apply-filter" name="browse-apply-filter" value="apply filters" class="btn btn-primary"/>
+                            	</div>                             
+	                        </form>   
+                            
+                        </div>                        
+                    </div><!--End Span3 -->
+                    
+                    <div class="span9">
+                    
+                    	<div class="row"><!-- row one -->
+                        	<div class="span7">
+                    	<a href="#" class="btn btn-warning"><i class="icon-arrow-left"></i> back to search results</a>
+                  	<!--<input type="button" id="back-overview-3c1" name="back-overview-3c1" class="btn btn-inverse" value="back to campaign overview"/>-->
+                        <hr/>
+                    	<h3>Campaign Title</h3>
+                        
+                        <div>
+                        	<span class="label label-success">120 <i class="icon-dollar"></i> </span>
+                            <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
+                            <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
+                            <span class="label label-important"><i class="icon-group"></i> global</span>
+                            
+                            <p class="pull-right">                            
+	                            <a href="#" class="btn btn-success pull-right"><i class="icon-dollar"></i> "purchase request"</a>
+                            </p>
+                            
+                            <br/>
+                            <span class="muted"><small><em>created 3 months ago</em></small></span>                            
+                        </div>
+                        
+                        <br/>
+                        <div id="campaign-images" class="carousel slide">
+                        	<ol class="carousel-indicators">
+                            	<li data-target="#campaign-images" data-slide-to="0" class="active"></li>	
+                                <li data-target="#campaign-images" data-slide-to="1" ></li>	
+                                <li data-target="#campaign-images" data-slide-to="2" ></li>	
+                            </ol>
+                         	<div class="carousel-inner">
+                            	<div class="item active"><img src="img/Slides-1.jpg"/> </div>
+                                <div class="item"><img src="img/Slides-2.jpg"/> </div>
+                                <div class="item"><img src="img/Slides-3.jpg"/> </div>
+                            </div>
+                            
+                            <a class="carousel-control left"  href="#campaign-images" data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#campaign-images" data-slide="next">&rsaquo;</a>
+                            
+                        </div>
+                        
+                        <div>
+                        	Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet. Pumpkinseed rock cod tubeblenny; sandburrower zebra bullhead shark seatrout discus, Blacksmelt ghost carp candiru; stonefish butterflyfish. Cutlassfish poolfish trench, yellowfin surgeonfish lionfish Old World knifefish kuhli loach yellowfin cutthroat trout batfish, Asiatic glassfish goby longnose dace? Dwarf loach amago moray eel, grayling garden eel triplefin blenny; sandbar shark wolf-eel pelican gulper priapumfish ricefish parasitic catfish. Halosaur trench Rio Grande perch sailbearer barbel mouthbrooder. Sturgeon electric knifefish, butterflyfish Canthigaster rostrata, dojo loach pickerel frigate mackerel ridgehead Pacific albacore halfmoon saber-toothed blenny, tripod fish.
+
+Striped burrfish wolffish tui chub grideye freshwater shark dorab, "emperor," armoured catfish; cownose ray swordtail redmouth whalefish tarwhine lefteye flounder, Australian grayling. Skipjack tuna bonito seamoth squarehead catfish queen danio pike characid Blind shark slender barracudina; grayling. Goatfish: haddock ricefish amur pike wels catfish bangus.
+                        </div>                        
+                    </div><!--End Span7 -->
+                    	
+                    		<div class="span2">
+                    	<!--Profile Top -->
+                    	<div class="well well-small text-center">
+    	                	<h4 class="undrln pull-left">offered by:</h4>
+                            <p>
+                            	toobey_s <br/> 
+                                <span class="muted">from snata_cruz</span>                                
+                            </p>
+                            <ul class="inline">
+                            	<li>
+                                	<i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                </li>
+                            </ul>
+                            <p class="muted">
+                            	(4,22/7 rating)
+                            </p>
+                            <p class="text-left">
+                            	Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet. Pumpkinseed rock cod tubeblenny; sandburrower zebra bullhead shark seatrout discus, Blacksmelt ghost carp candiru; stonefish(..)
+                            </p>
+                            <a href="#" class="btn btn-warning"><i class="icon-user-md"></i> view full profile</a>
+	                   </div><!--End Profile...-->   
+                       
+                       <!--Community response -->
+                       <div class="well well-small text-center">
+                       		<small class="undrln"><strong>Community response</strong></small>                            
+                            <p>
+                            	<h3>24</h3>
+                            	<small>people love this campaign</small>
+                                <a href="#" class="btn btn-danger"><i class="icon-heart"></i> You too?</a>
+                            </p>
+                            
+                           	 <h4 class="text-left">Share</strong></h4>
+                             <ul class="inline share-browse">
+                             	<li><a href="#" class="btn btn-small btn-info"><i class="icon-large icon-facebook"></i></a> 
+                                	<a href="#" class="btn btn-small btn-info"><i class="icon-large icon-google-plus"></i></a>
+                                	<a href="#" class="btn btn-small btn-info"><i class="icon-large icon-twitter"></i></a>
+                                <li><a href="#" class="btn btn-small btn-info"><i class="icon-large icon-linkedin"></i></a>
+                                	<a href="#" class="btn btn-small btn-info"><i class="icon-large icon-tumblr"></i></a>
+                                	<a href="#" class="btn btn-small btn-info"><i class="icon-large icon-pinterest"></i></a></li>
+                             </ul>
+                            
+                       </div><!--End Community response -->
+                                                                   
+                    </div><!--End Span2 -->
+                        </div><!-- End row one-->
+                        
+                        <section><hr/></section>
+                        
+                        <div class="row"><!--row two -->
+                        	<div class="span7">
+                                                        	
+                            	<h4>Something unclear? Just ask <i class="icon-smile"></i></h4>
+                                <div>
+                                    <form action="" method="" id="message-form" name="message-form">
+                                        <textarea id="unclear-question" name="unclear-question" rows="5" class="span6"></textarea>
+                                        <i class="icon-caret-right icon-4x cust-arrw-4b"></i>
+                                        <input type="submit" id="message-submit" name="message-submit" class="btn btn-info" value="send Message"/>
+                                    </form>
+                                </div>	
+                                
+                            </div>
+                            <div class="span2">
+	                            <div class="cust-cntr-4b">
+                                	<strong>toobey_s</strong>
+                                </div>                                
+                            	<img src="img/profile-pic.jpg" alt="profile-Pic" class="img-polaroid" />
+                            </div>
+                        </div><!--End row two -->
+                    	<section><hr/></section>    
+                    </div>
+                 
+                 	
+                    
+            	</div><!--End Campaign Browse -->
+            </section>
+       	 
+        <!--<hr/>  -->      
+        
+        <!--Footer -->
+        <!--<div class="row">
+        	<h4 class="text-center">Our Partners</h4>
+        	<div class="span12 b-img-spc">
+            	<img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-circle" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+            </div>	
+        </div>--><!--End Footer -->
+        
+	</div><!--End Container -->
+</body>
+
+</html>

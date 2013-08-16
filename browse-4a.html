@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Browse-4a-Page</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- For Mobile devices  -->
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+<!-- Css-->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/custom.css" />
+
+<!-- JavaScripts -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</head>
+
+<body>
+	<div class="container">
+    	
+        <!-- Header-->
+        <div class="row">
+        	<div class="span4">
+            	<img src="img/Logo.jpg" alt="Company Logo" />
+                Some tag line...
+            </div>
+            <div class="span8">              
+              <ul class="inline pull-right btn-to-left">
+                <li><a href="#">Help</a> <span class="divider"> | </span></li>
+             	<li><a href="#">How it Works</a></li>                
+              </ul>
+              
+              <div class="row">
+                  <div class="span8">                  		                  		
+                  	  <!--<form action="" class="navbar-search">
+              			<input type="text" class="search-query" placeholder="Search..." />
+             		  </form>-->
+                      <ul class="inline pull-right btn-to-left">                      
+                        <li>
+                        	<div class="btn-group">
+                            	<button class="btn">Frank Deering</button>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                	<span class="caret"></span>
+                               	</button>
+                                 	<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
+                                	    <li><a href="#">Settings</a></li>
+                                        <li><a href="#">logout</a></li>
+                                    </ul>
+                            </div>                        	
+                        </li>
+                      </ul>
+                   </div>
+              </div>
+           </div>               
+        </div><!-- End Of Header -->
+        
+        </div><!-- End Of Container -->
+        
+        <!--Moody, Text and Search box  -->
+        <div class="container">
+        	<section>
+            	<div class="row b-head-mood">
+                	<div class="span12">
+                    	<form action="">
+                        	<div class="input-append input-prepend">
+                            	<span class="add-on"><i class="icon-search"></i></span>
+                            	<input type="text" id="browse-search-inpt" name="browse-search-inpt" class="input-large" placeholder="enter search phrase" />						
+                                <input type="submit" class="btn btn-info" value="find!" />
+                            </div>
+                        </form>
+                    </div>	
+                </div>
+            </section>	
+        </div><!--End Moody -->
+        
+        
+        <!-- Campaign Browse-->
+        <div class="container">
+           
+            <section>            
+	           
+    	        <!--All-->
+        	    <div class="row">                
+                 
+                 	<div class="span3">
+                    	<div class="padd-browse-leftcontent">   
+                                             	
+                            <form action="" method="" class="moveup">                        	
+                            	<p class="well well-small">
+                                    Are you looking for <strong>cmapaigns</strong> or <strong> offers ?</strong>
+                                    <br/>
+                                	<select id="browse-looking-for" name="browse-looking-for" class="margin-top-browse input-medium">
+                                    	<option>cmapaigns</option>
+                                      	<option>offers</option>
+                                        <option selected>both</option>
+                                    </select>
+                                </p> 
+                                
+                                <div class="well well-small">                            
+	                            	<h3>Filters</h3>
+    	                            <hr/>
+                                
+        	                        <h4><strong>price</strong></h4>
+            	                    <div class="input-prepend input-append">
+                	                	<span class="add-on">from</span>
+                    	                <input type="text" id="from-price" name="from-price" class="input-small" />
+                        	            <span class="add-on"><i class="icon-dollar"></i></span>
+                            	    </div>
+                                	<div class="input-prepend input-append">
+                                		<span class="add-on">to</span>
+                                    	<input type="text" id="to-price" name="to-price" class="input-small" />
+                                    	<span class="add-on"><i class="icon-dollar"></i></span>
+                                	</div>
+                                	<hr/>
+                                
+                                	<h4><strong>Reach</strong></h4>
+                               	 	<select id="browse-reach" name="browse-reach" class="input-medium">
+                                		<option selected>city-wide</option>
+                                    	<option>state-wide</option>
+                                    	<option>nation-wide</option>
+                                	</select>
+                                	<hr/>
+                                
+                                	<h4><strong>Location</strong></h4>
+                                	<div class="input-prepend">
+                                		<span class="add-on">near</span>
+                                    	<input type="text" id="browse-near" name="browse-near" class="input-small"/>
+                                	</div>
+                                	<hr/>
+                                
+                                	<h4>Author rating</h4>
+                                	<div class="input-prepend">
+                                		<span class="add-on">at least</span>
+                                    	<select id="browse-author-rate" name="browse-author-rate" class="input-medium">
+                                       		<option selected>1 star</option>
+                                        	<option>2 star</option>
+                                        	<option>3 star</option>
+                                        	<option>4 star</option>
+                                        	<option>5 star</option>
+                                    	</select>
+                                	</div>
+                                	<hr/>
+                                
+                                	<h4>Duration</h4>
+                                	<div class="input-prepend input-append">
+                                		<span class="add-on">from</span>
+                                		<input type="text" id="browse-duratn-from" name="browse-duratn-from" class="input-small"/>
+                                    	<span class="add-on">days</span>
+                                	</div>
+                                	<div class="input-prepend input-append">
+                                		<span class="add-on">to</span>
+                                		<input type="text" id="browse-duratn-to" name="browse-duratn-to" class="input-small"/>
+                                    	<span class="add-on">days</span>
+                                	</div>
+                                	<hr/>                                
+                                <input type="submit" id="browse-apply-filter" name="browse-apply-filter" value="apply filters" class="btn btn-primary"/>
+                            	</div>                             
+	                        </form>   
+                            
+                        </div>                        
+                    </div><!--End Span3 -->
+                    
+                    
+                    <div class="span9">
+                    	<div class="pagination">
+                        	<ul>
+                            	<li class="disabled"><a href="#"><i class="icon-chevron-left"></i> Prev</a></li>
+                            	<li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">Next <i class="icon-chevron-right"></i> </a></li>
+                            </ul>    
+                            <div class="input-prepend pull-right browse-cust-mov">
+	                            <span class="add-on">Order by</span>
+                                <select id="browse-order-by" name="browse-order-by" class="input-medium" >
+    		                    	<option selected>newset campaign</option>
+            		                <option>oldest campaign</option>
+                    		        <option>campaign</option>
+                       			</select>                        
+                            </div>
+                        </div>                        
+                    	<hr/>
+                        	
+                        <div class="row over-color padd-browse-both">
+                        	<div class="span2">
+                            	<img src="img/Browse-Left-img.jpg" alt="Browse-Campaign" />
+                            </div>
+                            <div class="span5">
+                           		<h4>Campaign Title</h4>
+                                <div>
+                                	<ul class="inline">
+                                    	<li>
+                                        	<span class="label label-success">120 <i class="icon-dollar"></i></span>
+                                            <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
+                                            <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
+                                            <span class="label label-important"><i class="icon-group"></i> global</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p>Description of campaign.Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet.Dwarf loach amago moray eel.</p>
+                                <small class="muted"><em>created 3 months ago</em></small>
+                            </div>
+                            <div class="span2 text-center browse-cntnt-toleft">
+                            	<img src="img/Small-Profile.jpg" alt="Browse-Small-Profile" />
+                                <div class="browse-rate-relt">
+                                	<div class="browse-abosl">
+                                        <ul class="inline">
+                                            <li>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="browse-abosl2">
+                                        <ul class="inline">
+                                            <li>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                            </li>
+                                        </ul>
+                                    <small><em>(7 rating)</em></small>
+                                    </div>                                    
+                                </div>                                                                                            
+                                
+                            </div>
+                        </div>                        
+                        <hr/>
+                        
+                         <div class="row over-color padd-browse-both">
+                        	<div class="span2">
+                            	<img src="img/Browse-Left-img.jpg" alt="Browse-Campaign" />
+                            </div>
+                            <div class="span5">
+                           		<h4>Campaign Title</h4>
+                                <div>
+                                	<ul class="inline">
+                                    	<li>
+                                        	<span class="label label-success">120 <i class="icon-dollar"></i></span>
+                                            <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
+                                            <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
+                                            <span class="label label-important"><i class="icon-group"></i> global</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p>Description of campaign.Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet.Dwarf loach amago moray eel.</p>
+                                <small class="muted"><em>created 3 months ago</em></small>
+                            </div>
+                            <div class="span2 text-center browse-cntnt-toleft">
+                            	<img src="img/Small-Profile.jpg" alt="Browse-Small-Profile" />
+                                <div class="browse-rate-relt">
+                                	<div class="browse-abosl">
+                                        <ul class="inline">
+                                            <li>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="browse-abosl2">
+                                        <ul class="inline">
+                                            <li>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                               <i class="icon-star-empty"></i>
+                                            </li>
+                                        </ul>
+                                    <small><em>(7 rating)</em></small>
+                                    </div>                                    
+                                </div>                                                                                            
+                                
+                            </div>
+                        </div>                        
+                        <hr/>
+                        
+                        <div class="row over-color padd-browse-both">
+                        	<div class="span2">
+                            	<img src="img/Browse-Left-img.jpg" alt="Browse-Campaign" />
+                            </div>
+                            <div class="span5">
+                           		<h4>Campaign Title</h4>
+                                <div>
+                                	<ul class="inline">
+                                    	<li>
+                                        	<span class="label label-success">120 <i class="icon-dollar"></i></span>
+                                            <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
+                                            <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
+                                            <span class="label label-important"><i class="icon-group"></i> global</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p>Description of campaign.Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet.Dwarf loach amago moray eel.</p>
+                                <small class="muted"><em>created 3 months ago</em></small>
+                            </div>
+                            <div class="span2 text-center browse-cntnt-toleft">
+                            	<img src="img/Small-Profile.jpg" alt="Browse-Small-Profile" />
+                                <div class="browse-rate-relt">
+                                	<div class="browse-abosl">
+                                        <ul class="inline">
+                                            <li>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="browse-abosl2">
+                                        <ul class="inline">
+                                            <li>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                               <i class="icon-star-empty"></i>
+                                            </li>
+                                        </ul>
+                                    <small><em>(7 rating)</em></small>
+                                    </div>                                    
+                                </div>                                                                                            
+                                
+                            </div>
+                        </div>                        
+                        <hr/>
+                        
+                        <div class="row over-color padd-browse-both">
+                        	<div class="span2">
+                            	<img src="img/Browse-Left-img.jpg" alt="Browse-Campaign" />
+                            </div>
+                            <div class="span5">
+                           		<h4>Campaign Title</h4>
+                                <div>
+                                	<ul class="inline">
+                                    	<li>
+                                        	<span class="label label-success">120 <i class="icon-dollar"></i></span>
+                                            <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
+                                            <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
+                                            <span class="label label-important"><i class="icon-group"></i> global</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p>Description of campaign.Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet.Dwarf loach amago moray eel.</p>
+                                <small class="muted"><em>created 3 months ago</em></small>
+                            </div>
+                            <div class="span2 text-center browse-cntnt-toleft">
+                            	<img src="img/Small-Profile.jpg" alt="Browse-Small-Profile" />
+                                <div class="browse-rate-relt">
+                                	<div class="browse-abosl">
+                                        <ul class="inline">
+                                            <li>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="browse-abosl2">
+                                        <ul class="inline">
+                                            <li>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                                <i class="icon-star-empty"></i>
+                                               <i class="icon-star-empty"></i>
+                                            </li>
+                                        </ul>
+                                    <small><em>(7 rating)</em></small>
+                                    </div>                                    
+                                </div>                                                                                            
+                                
+                            </div>
+                        </div>                        
+                        <hr/>
+                        
+                        
+                        
+                        
+                        
+                        <div class="pagination pagination-centered">
+                        	<ul>
+                            	<li class="disabled"><a href="#"><i class="icon-chevron-left"></i> Prev</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">Next <i class="icon-chevron-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!--End Span9 -->
+                  
+            	</div><!--End Campaign Browse -->
+            </section>
+       	 
+        <!--<hr/>  -->      
+        
+        <!--Footer -->
+        <!--<div class="row">
+        	<h4 class="text-center">Our Partners</h4>
+        	<div class="span12 b-img-spc">
+            	<img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-circle" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+            </div>	
+        </div>--><!--End Footer -->
+        
+	</div><!--End Container -->
+</body>
+
+</html>
