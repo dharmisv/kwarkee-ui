@@ -18,6 +18,7 @@
 <!-- JavaScripts -->
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.custom.72844.js"></script>
 <script>
 
 </script>
@@ -104,39 +105,55 @@
                   	<!--Heading -->
                   	<p class="lead">Active Campaigns</p><!--End Of Heading -->
                      
-                    <!--Use this Entire Section to Describe a campaign -->
-                    <div class="row">
-                    	<div class="span2">
-                        	<div class="campaign-3c">
-    	                    	<img src="img/Campaigns.jpg" alt="Campaigns" />
-	                            <span class="label label-important">66<i class="icon-dollar"></i></span>
+	                    <!--Use this Entire Section to Describe a campaign -->
+                        <div class="media campaign-3c">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="img/Campaigns.jpg">                                
+                                <span class="label label-important">66<i class="icon-dollar"></i></span>
+                            </a>
+                            
+                            <div class="media-body">
+                                <h3 class="media-heading">Campaign One <small class="pull-right">created 5th of July 2013</small></h3>
+                            	<p>Shrimpfish yellowfin cutthroat trout Redfin perch channel bass; wolf-eel featherback torpedo hardhead catfish electric eel. 
+                            		<!--<input type="button" id="edit-campaign-one" class="btn pull-right" value="edit campaign" />-->
+                                    <a href="#" class="btn btn-danger pull-right"><i class="icon-edit"></i> edit campaign</a>
+                            	</p>
                             </div>
-                        </div>	
-                        <div class="span5">
-                        	<h3>Campaign One <small class="pull-right">created 5th of July 2013</small></h3>
-                            <p>Shrimpfish yellowfin cutthroat trout Redfin perch channel bass; wolf-eel featherback torpedo hardhead catfish electric eel. 
-                            <input type="button" id="edit-campaign-one" class="btn pull-right" value="edit campaign" />
-                            </p>
-                        </div>                 
-                    </div>
-                    <hr/><!--End Use this Entire Section to Describe a campaign -->
-                    
-                    <div class="row">
-                    	<div class="span2">
-                        	<div class="campaign-3c">
-	                        	<img src="img/Campaigns.jpg" alt="Campaigns" />
-    	                        <span class="label label-important">66<i class="icon-dollar"></i></span>
+                        </div>
+                        <hr/>
+                        <!--End Use this Entire Section to Describe a campaign -->
+                        
+                        <div class="media campaign-3c">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="img/Campaigns.jpg">                                
+                                <span class="label label-important">66<i class="icon-dollar"></i></span>
+                            </a>
+                            
+                            <div class="media-body">
+                                <h3 class="media-heading">Campaign One <small class="pull-right">created 5th of July 2013</small></h3>
+                            	<p>Shrimpfish yellowfin cutthroat trout Redfin perch channel bass; wolf-eel featherback torpedo hardhead catfish electric eel. 
+                            		<!--<input type="button" id="edit-campaign-one" class="btn pull-right" value="edit campaign" />-->
+                                    <a href="#" class="btn btn-danger pull-right"><i class="icon-edit"></i> edit campaign</a>
+                            	</p>
                             </div>
-                        </div>	
-                        <div class="span5">
-                        	<h3>Campaign Two <small class="pull-right">created 8th of October 2013</small></h3>
-                            <p>Shrimpfish yellowfin cutthroat trout Redfin perch channel bass; wolf-eel featherback torpedo hardhead catfish electric eel. 
-                            <input type="button" id="edit-campaign-one" class="btn pull-right" value="edit campaign"/>
-                            </p>
-                        </div>                 
-                    </div>
-                    <hr/> 
-                    
+                        </div>
+                        <hr/>
+                        
+                        <div class="media campaign-3c">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="img/Campaigns.jpg">                                
+                                <span class="label label-important">66<i class="icon-dollar"></i></span>
+                            </a>
+                            
+                            <div class="media-body">
+                                <h3 class="media-heading">Campaign One <small class="pull-right">created 5th of July 2013</small></h3>
+                            	<p>Shrimpfish yellowfin cutthroat trout Redfin perch channel bass; wolf-eel featherback torpedo hardhead catfish electric eel. 
+                            		<!--<input type="button" id="edit-campaign-one" class="btn pull-right" value="edit campaign" />-->
+                                    <a href="#" class="btn btn-danger pull-right"><i class="icon-edit"></i> edit campaign</a>
+                            	</p>
+                            </div>
+                        </div>
+                        <hr/>     
                     
                   </div>  <!--End Of Campaigns -->
                   
@@ -157,19 +174,7 @@
                                         <i class="icon-star-empty"></i>
                                     </li>
                                 </ul>                                
-                            </div>
-                            <!--<div class="rated-capacity">
-                            	<ul class="inline">
-                                	<li>
-                                    	<i class="icon-star-empty"></i>
-                                        <i class="icon-star-empty"></i>
-                                        <i class="icon-star-empty"></i>
-                                        <i class="icon-star-empty"></i>
-                                        <i class="icon-star-empty"></i>
-                                    </li>
-                                    
-                                </ul>  
-                            </div>  -->                      	
+                            </div>                                     	
                         </div>
                         
                         <!--Campaigns -->
@@ -188,11 +193,11 @@
         <div class="row">
         	<h4 class="text-center">Our Partners</h4>
         	<div class="span12 b-img-spc">
-            	<img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
-                <img src="img/Footer-company.jpg" alt="Company" class="img-circle" />
+            	<img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
                 <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
-                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
-                <img src="img/Footer-company.jpg" alt="Company" class="img-polaroid" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
             </div>	
         </div><!--End Footer -->
         

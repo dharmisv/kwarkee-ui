@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Profile-3e-Page</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- For Mobile devices  -->
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+<!-- Css-->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/custom.css" />
+
+<!-- JavaScripts -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<script src="js/modernizr.custom.72844.js"></script>
+<script>
+	$(document).ready(function() 
+	{
+		//-- For ScrollBar
+	 	$('#message-scrollpane').slimScroll(
+		 {
+	        height: '100px'
+    	 });
+    });
+</script>
+</head>
+
+<body>
+	<div class="container">
+    	
+        <!-- Header-->
+        <div class="row">
+        	<div class="span4">
+            	<img src="img/Logo.jpg" alt="Company Logo" />
+                Some tag line...
+            </div>
+            <div class="span8">              
+              <ul class="inline pull-right btn-to-left">
+                <li><a href="#">Help</a> <span class="divider"> | </span></li>
+             	<li><a href="#">How it Works</a></li>                
+              </ul>
+              
+              <div class="row">
+                  <div class="span8">                  		                  		
+                  	  <form action="" class="navbar-search">
+              			<input type="text" class="search-query" placeholder="Search..." />
+             		  </form>
+                      <ul class="inline pull-right btn-to-left">                      
+                        <li>
+                        	<div class="btn-group">
+                            	<button class="btn">Frank Deering</button>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                	<span class="caret"></span>
+                               	</button>
+                                 	<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
+                                	    <li><a href="#">Settings</a></li>
+                                        <li><a href="#">logout</a></li>
+                                    </ul>
+                            </div>                        	
+                        </li>
+                      </ul>
+                   </div>
+              </div>
+           </div>               
+        </div><!-- End Of Header -->
+        
+        </div><!-- End Of Container -->
+        
+        <!--Moody, Text and Search box  -->
+        <div class="container">
+        	<section>
+            	<div class="row b-head-mood">
+                	<div class="span12">
+                    	<h1>Your message box</h1>
+                    </div>	
+                </div>
+            </section>	
+        </div><!--End Moody -->
+        
+        
+        <!-- Graph &amp; Profile Part -->
+        <div class="container">
+           
+            <section>            
+	           
+    	        <!--All-->
+        	    <div class="row">
+                
+                  <!--Left Side Links-->
+                  <div class="span3">    
+                  	<div class="b-left">              	
+                       <ul class="nav nav-list">                        
+                        <li><a href="#"><i class="icon-anchor"></i> Dashboard</a></li>
+                        <li><a href="#"><i class="icon-fire"></i> My Campaigns</a></li>                       
+                        <li class="active"><a href="#"><i class="icon-hand-right"></i> Pledges</a></li>
+                        <li><a href="#"><i class="icon-envelope-alt"></i> Messages</a></li>                      
+                       </ul>    
+                       <span class="campaigns-all label">1</span>         
+                       <span class="pledges-all label">2</span>         
+                       <span class="messages-all label">3</span>                 
+                    </div>
+                  </div>  <!--End Of Left Side... -->
+                  
+            	  <!--Messages and Details -->
+                  <div class="span7 profile-a-btmspc">
+                  
+                  	<div class="clearfix">
+                    	<select id="campaign-message-dropdown" name="campaign-message-dropdown" class="pull-left">
+                        	<option selected>My Super campaign 2013</option>
+                            <option>My Super campaign 2012</option>
+                            <option>My Super campaign 2011</option>
+                            <option>My Super campaign 2010</option>
+                        </select>
+                        
+                        <a href="#" class="btn btn-info pull-right btn-null-pull">view all campaign details</a>
+                    </div>                              
+                    <hr/>
+                    
+                    
+                    <div class="row">
+                    	<!--User Proposal and Thread  -->
+                    	<div class="span2">
+                        	<div class="well well-small">                            
+                                <div class="profile-over-3e clearfix mess-rel">
+                                    <img src="img/Smallest-Profile-pic.jpg" alt="Smallest Profile Pic" class="img-rounded pull-left small-padd" /> 
+                                    <strong>John_Doe59</strong><br/>
+                                    <small class="muted">3 hours ago</small>
+                                    <span class="label label-important mess-absl">1</span>
+                                    <span class="label label-warning mess-absl2"><i class="icon-dollar"></i></span>
+                                </div>   
+                                <div class="profile-over-3e clearfix mess-rel">
+                                    <img src="img/Smallest-Profile-pic.jpg" alt="Smallest Profile Pic" class="img-rounded pull-left small-padd" /> 
+                                    <strong>Dave_Frost</strong><br/>
+                                    <small class="muted">yesterday</small>
+                                    <span class="label label-important mess-absl">1</span>
+                                    <span class="label label-warning mess-absl2"><i class="icon-dollar"></i></span>
+                                </div>   
+                                <div class="profile-over-3e clearfix mess-rel">
+                                    <img src="img/Smallest-Profile-pic.jpg" alt="Smallest Profile Pic" class="img-rounded pull-left small-padd" /> 
+                                    <strong>LisoMeek</strong><br/>
+                                    <small class="muted">last monday</small>
+                                    <span class="label label-important mess-absl">1</span>
+                                    <span class="label label-warning mess-absl2"><i class="icon-dollar"></i></span>
+                                </div>   
+                                <div class="profile-over-3e clearfix mess-rel">
+                                    <img src="img/Smallest-Profile-pic.jpg" alt="Smallest Profile Pic" class="img-rounded pull-left small-padd" /> 
+                                    <strong>Sam_Darren</strong><br/>
+                                    <small class="muted">2 weeks ago</small>
+                                    <span class="label label-important mess-absl">1</span>
+                                    <span class="label label-warning mess-absl2"><i class="icon-dollar"></i></span>
+                                </div>    	
+                            </div>
+                        </div><!--End User Proposal and Thread  -->
+                        
+                        
+                        <!--Proposal / Message details -->
+                        <div class="span5">
+                        
+                        	<!--Fixed Top -->
+                        	<div class="row">
+                            	<div class="span3">
+                                	<h3>215<i class="icon-dollar"></i></h3>
+                                    <span class="muted">desired starting date</span>
+                                    <h4>28th of October 2013</h4>
+                                </div>
+                                <div class="span2">
+                                	<a href="#" class="btn btn-success input-block-level"><i class="icon-smile"></i> accpet this offer</a>
+                                    <a href="#" class="btn btn-danger input-block-level butt-space butt-space-bottm"><i class="icon-trash"></i> turn down this offer</a>
+                                </div>
+                            </div>                            
+                           <!--End Fixed Top -->
+                           
+                           <!--Message -->
+                               <div class="media">
+                            	<a class="pull-left" href="#">
+                           		 <img class="media-object" src="img/Small-Profile.jpg"alt="Smallest Profile pic" />
+                           		</a>
+                            	<div class="media-body">
+                                	<h5 class="media-heading">Dave-Frost</h5> 
+                                	<div id="message-scrollpane">                                        
+                                        <p>
+                                                Cobbler longfin escolar European chub northern pearleye grouper masu salmon eel-goby barbel medusafish, "sand goby." Sand diver spadefish orange roughy electric eel, duckbilled barracudina velvet-belly shark conger eel. Banjo catfish mojarra tang, slickhead viperfish Devario sand diver scaly dragonfish, plownose chimaera.
+                                        </p>   
+                                    </div>                        	
+                            	</div>
+                            </div><!--End Message -->
+       
+                          
+                           <hr/>
+                           <div class="row"><!--Reply box -->
+                           	<div class="span1">                            
+                            </div>
+                            <div class="span4">
+                            	<form>
+                                	<textarea id="reply-message" name="reply-message" class="input-block-level" placeholder="your answer..."></textarea>
+                                    <input type="submit" id="reply-3e" name="reply-3e" class="btn btn-success pull-right" value="send" />
+                                </form>
+                            </div>
+                           </div><!--End Reply box -->
+                            
+                        </div><!--End Proposal / Message details -->
+                        
+                    </div>
+                    
+                  </div>  <!--End Messages and Details-->
+                  
+                  
+                  <!--Side bar Profile-->
+                  <div class="span2">
+                  	<div class="profile-img-align">                   	
+		                <img src="img/Campaign-Pic.jpg" alt="Camp-Pic" />                                                
+                        <p class="padd-txt-3e">
+                        	Cobbler longfin escolar European chub northern pearleye grouper masu salmon eel-goby barbel medusafish, "sand goby." Sand diver spadefish orange roughy electric eel, duckbilled barracudina velvet-belly shark conger eel. Banjo catfish mojarra tang, slickhead viperfish Devario sand diver scaly dragonfish, plownose chimaera(..)
+                            <a href="#" class="btn btn-info">view all details</a>
+                        </p>                       
+                    </div>
+                  </div><!--End Side bar Profile-->	
+                  
+            	</div><!--End Graph &amp; Profile... -->
+            </section>
+       	 
+        <hr/>        
+        
+        <!--Footer -->
+        <div class="row">
+        	<h4 class="text-center">Our Partners</h4>
+        	<div class="span12 b-img-spc">
+            	<img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+            </div>	
+        </div><!--End Footer -->
+        
+	</div><!--End Container -->
+</body>
+
+</html>
