@@ -94,6 +94,15 @@
 
 
 /*..::-Browse Page-::*/
+
+#browse-looking-for,
+#browse-reach { width: 100%; }
+
+#browse_filters .input-prepend .add-on:first-child,
+#browse_filters .input-prepend .btn:first-child {
+    width: 50px;
+}
+
 /*4a*/
 .padd-browse-leftcontent{ padding:0px 15px;}
 .margin-top-browse{margin-top:1em;}
@@ -103,13 +112,13 @@
 .browse-abosl2{position:absolute; width:100%; margin:0 auto;}
 .browser-cntr-contnt{ background:#096;}
 .padd-browse-both{padding:10px 0;}
-.over-color:hover{background:#f2eb9e; }
+.over-color:hover{background:#f2eb9e; cursor: pointer; }
 
 /*4b*/
 .undrln{border-bottom:1px solid #000; text-align:left; }
 .back-browse-right-4b{ text-align:center;/*background:#096;*/}
 .share-browse li{padding-top:10px;}
-.cust-cntr-4b{text-align:center;}
+.cust-cntr-4b{text-align:center; width:90%;}
 .padd-top-4b{margin-top:1em;}
 /*..::-End Browse Page-::*/
 
