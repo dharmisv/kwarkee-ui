@@ -4,14 +4,30 @@
 .b-equal-margin{margin-top:6em;}
 .b-img-spc {text-align:center;}
 .b-img-spc img{margin-right:1em; margin-bottom:1em;}
-.b-moody-background{padding:2em 0; background:url(../img/Background-1170.jpg) no-repeat scroll top right; margin:0 auto; }
+/*.b-moody-background{padding:2em 0; background:url(../img/Background-1170.jpg) no-repeat scroll top right; margin:0 auto; }*/
+.b-moody-background{padding:6em 0; margin:0 auto; /*background:url(../img/background-img.jpg) no-repeat scroll top right; */ }
+.b-textbutton-cont{background:#14200c; display:block; max-width:800px; margin:0 auto; padding:10px 0; color:#FFF; border-radius:8px; -moz-box-shadow:    inset 0 0 10px #000000;  -webkit-box-shadow: inset 0 0 10px #000000;  box-shadow:         inset 0 0 10px #000000;}
 .b-padd{ padding:0.5em 1em;left:auto; right:0;}
 .b-relateive{position:relative;}
 .b-absolute{position:absolute; top:-8px; left: 45%; min-width:50px; text-align:center;}
-.b-absolutebotmrght{position:absolute; bottom:-14px; right:15px; min-width:120px; text-align:center;}
-.b-absolutebotmrght2{position:absolute; bottom:-14px; left:40px; min-width:240px; text-align:center;}
+.b-absolutebotmrght{position:absolute; bottom:-12px; right:15px; min-width:120px; text-align:center;}
+.b-absolutebotmrght2{position:absolute; bottom:-12px; left:40px; min-width:240px; text-align:center;}
 .b-top-marg{margin-top:0em;}
 
+.header-padd{ padding:10px 0px;}
+/*--Wide Spread--Landing Page*/
+.b-inner-moodimage{background:url(../img/background-img.jpg) no-repeat top center;}
+.b-cont-wide{ padding:0px 0; background:url(../img/background-color.jpg) repeat-x;}
+.b-moody-background small{ font-size:14px;}
+.large-padd{padding:18px 50px;/*padding-left: 40px;padding-right:40px;*/}
+.label-rounded{border-radius:10px; padding-top:5px; color:#000; background:#dedede;}
+.b-absolute-ln-mood{position:absolute; top:32%; right:-1.5%; height:68%; border-right:4px solid #000;}
+/*--End Wide Spread--Landing Page*/
+
+/*..::Different Header Background::..*/
+.mood-low{background:url(../img/background-color.jpg) repeat-x; height:340px;}
+.mood-sheet{background:url(../img/sheet.jpg) no-repeat top center; height:340px;}
+/*..::End Different Header Background::..*/
 
 
 /*..::-Registration Form-::*/
@@ -22,15 +38,17 @@
 .reg-space-mini{margin-bottom:1.5em;}
 .reg-space-top{margin-top:1em; }
 .reg-padd-left{padding-left:2em;}
+.reg-all-padd-left{padding-left:20px;}
+.container-background-reg{background:#f5f5f5; margin-top:-10px;}
 /*..::-End Registration Form-::*/
 
 
 /*..::-Profile Page-::*/
-.b-head-mood{background:url(../img/Mood.jpg) no-repeat scroll top right; margin-bottom:1em;}
-.b-head-mood .span12{padding-top:60px; text-align:center; /* padding-left:22em;*/}
+.b-head-mood{/*background:url(../img/Mood.jpg) no-repeat scroll top right;*/ margin-bottom:1em;}
+.b-head-mood .span12{padding-top:40px; text-align:center; /* padding-left:22em;*/}
 
 .b-left{position:relative;}
-.b-left ul{margin-top:-25px; margin-left:20px;}
+.b-left ul{margin-top:-15px; margin-left:20px;}/*margin-top:-25px; margin-left:20px;*/
 .prof-space{margin:1em 0;}
 .paypa-form{ margin-top:4em; position:relative;}
 .form-name{position:absolute; top:-8px; left:15px;}
@@ -55,7 +73,8 @@
 
 /*3b*/
 #change-picture-3b{margin-top:1em;}
-
+.take-container-up{margin-top:-230px; background:#f5f5f5;}
+.magn-bottom{ margin-bottom:1em;}
 /*3c*/
 .campaign-3c{position:relative;}
 /*.campaign-3c .label{ position:absolute; top:-7px; left:50%;}*/
@@ -127,6 +146,8 @@
 
 @media only screen and (max-width:1024px)
 {
+	.b-absolute-ln-mood{right:-3.6%;}
+	
 	/*..::-Profile Page-::*/
 	/*3c*/	
 	.campaign-3c .label{ position:absolute; top:0px; left:18%;}
@@ -147,6 +168,8 @@
 
 @media only screen and (max-width:768px)
 {
+	.b-absolute-ln-mood{right:-4.8%;}
+	
 	h3.b-txt-underline{font-size:20px;}
 	
 	/*..::-Registration Form-::*/
@@ -217,6 +240,9 @@
 }
 @media only screen and (max-width:480px)
 {
+	.b-absolute-ln-mood{display:none;}
+	.bttn-move-top{margin-top:2em; }
+	
 	h3.b-txt-underline{font-size:24px; text-align:left;}
 	.b-img-spc img{margin-right:1em; margin-bottom:1em;}
 	.b-equal-margin{margin-top:2em;}
@@ -291,6 +317,7 @@
 
 @media only screen and (max-width:320px)
 {
+	.bttn-move-top{margin-top:0em; }
 	h3.b-txt-underline{font-size:24px; text-align:left;}
 	.b-img-spc img{margin-right:1em; margin-bottom:1em;}
 	.b-equal-margin{margin-top:2em;}
