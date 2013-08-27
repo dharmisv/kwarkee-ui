@@ -28,39 +28,59 @@
 	<div class="container">
     	
         <!-- Header-->
-        <div class="row header-padd">
-        	<div class="span4">
-            	<a href="#"><img src="img/logo.png" alt="KwarKee" /></a>
-            </div>
-            <div class="span8">              
-              <ul class="inline pull-right btn-to-left">
-                <li><a href="#">Help</a> <span class="divider"> | </span></li>
-             	<li><a href="#">How it Works</a></li>                
-              </ul>
-              
-              <div class="row">
-                  <div class="span8">                  		                  		
-                  	  <form action="" class="navbar-search">
-              			<input type="text" class="search-query" placeholder="search campaigns" />
-             		  </form>
-                      <ul class="inline pull-right btn-to-left">                      
-                        <li>
-                        	<div class="btn-group">
-                            	<button class="btn">Frank Deering</button>
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                	<span class="caret"></span>
-                               	</button>
-                                 	<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
-                                	    <li><a href="#">Settings</a></li>
-                                        <li><a href="#">logout</a></li>
-                                    </ul>
-                            </div>                        	
-                        </li>
-                      </ul>
-                   </div>
-              </div>
-           </div>               
-        </div><!-- End Of Header -->
+                <div class="row header-padd">
+                        	<div class="span4">
+                            	<a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
+                            </div>
+                            <div class="span8">
+                                <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
+                                    <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
+                                    <a href="./how_it_works.html"><strong>How it Works</strong></a>
+                                </div>
+
+                              <div class="row">
+                                  <div class="span8">
+                                  	  <form action="" class="navbar-search">
+                              			<input type="text" class="search-query" placeholder="Search..." />
+                             		  </form>
+                                      <ul class="inline pull-right btn-to-left">
+
+                                        <li>
+                                        	<a href="registration.html" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
+                                        </li>
+
+                                        <li class="dropdown b-top-marg">
+                                        	<a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
+                                            	<i class="icon-user"></i> Sign In <strong class="caret"></strong>
+                                            </a>
+                                            <div class="dropdown-menu b-padd">
+                                            	<form action="" method="post">
+
+                                                	<div class="input-prepend">
+                                                        <span class="add-on"><i class="icon-user"></i></span>
+                                                     <input type="text" id="b-username" name="b-username" placeholder="username" class="input-medium" />
+                                                     </div>
+
+                                                     <div class="input-prepend">
+                                                        <span class="add-on"><i class="icon-key"></i></span>
+                                                        <input type="password" id="b-password" name="b-password" placeholder="password" class="input-medium" />
+                                                      </div>
+
+
+                                                     <label class="checkbox">
+                										<input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
+                									</label>
+
+                                                    <input type="submit" id="b-login" name="b-login" class="btn btn-primary" value="Login" />
+
+                                                </form>
+                                            </div>
+                                        </li>
+                                      </ul>
+                                   </div>
+                              </div>
+                           </div>
+                        </div><!-- End Of Header -->
         
         </div><!-- End Of Container -->
         
@@ -71,7 +91,7 @@
                     <section>
                         <div class="row b-head-mood">
                             <div class="span12">
-                                <h1>Your <strong>profile:</strong>"franky33"</h1>
+                                <h1>Your profile - franky33</h1>
                             </div>	
                         </div>
                     </section>	
@@ -92,18 +112,18 @@
                   	<div class="b-left">              	
                        <ul class="nav nav-list">                        
                         <li class="active"><a href="#">Dashboard</a></li>
-                        <li><a href="#">My Campaigns</a></li>                       
-                        <li><a href="#">Pledges</a></li>
-                        <li><a href="#">Messages</a></li>                       
+                        <li><a href="#" class="comingsoon_feature">My Campaigns</a></li>
+                        <li><a href="#" class="comingsoon_feature">Pledges</a></li>
+                        <li><a href="#" class="comingsoon_feature">Messages</a></li>
                        </ul>    
-                       <span class="campaigns-all label">1</span>         
-                       <span class="pledges-all label">2</span>         
-                       <span class="messages-all label">3</span>                 
+                       <!--<span class="campaigns-all label">1</span>
+                       <span class="pledges-all label">2</span>
+                       <span class="messages-all label">3</span>-->
                     </div>
                   </div>  <!--End Of Left Side... -->
                   
             	  <!--Profile Update Form -->
-                  <div class="span7 profile-a-btmspc">
+                  <div class="span7 profile-a-btmspc" style="padding-top:1em;">
                   	<div class="row">                    	
                     	<form action="" method="post">  
                             <div class="controls controls-row">
@@ -121,22 +141,25 @@
                             <div class="controls controls-row">                             
                              <label for="short-desptn-3b" class="span4">A short description of yourself / your brand:</label>
                              <label for="" class="span3">Your profile picture</label>
-                             <textarea id="short-desptn-3b" name="short-desptn-3b" class="span4" rows="4" cols="30" ></textarea>
+                             <textarea id="short-desptn-3b" name="short-desptn-3b" class="span4" rows="8" cols="30" ></textarea>
+
                              <div class="span3">
-                             	<img src="img/profile-pic.jpg" /> 
-                             	<input type="button" id="change-picture-3b" name="change-picture-3b" value="replace photo" class="btn"/>
+                             	<img style="float:left;padding-right:0.4em;" src="img/profile-pic.jpg" />
                                 <small class="muted">picture should be a .jpg, .gif or .png and not bigger than 5MB.</small>
+                             	<input type="file" id="change-picture-3b" name="change-picture-3b" value="replace photo" class="span3"/>
+
                              </div>
                             </div>
-                            <div class="controls controls-row">
+                            <!--<div class="controls controls-row">
                              	<p class="lead span4">Change password </p>
                             </div>
+
                             <div class="controls controls-row">
-                             <label for="old-password-3b" class="span4">enter your old password first:</label>
-                             <label for="new-password-3b" class="span3">new password:</label>
-                             <input type="text" id="old-password-3b" name="old-password-3b" class="span4" />                             
-                             <input type="text" id="new-password-3b" name="new-password-3b" class="span3" />
-                            </div>
+                                <label for="old-password-3b" class="span4">enter your old password first:</label>
+                                <label for="new-password-3b" class="span3">new password:</label>
+                                <input type="text" id="old-password-3b" name="old-password-3b" class="span4" />
+                                <input type="text" id="new-password-3b" name="new-password-3b" class="span3" />
+                            </div>-->
                             
                             <div class="controls controls-row">
                              	<p class="span4">
