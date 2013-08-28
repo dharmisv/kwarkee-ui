@@ -1,206 +1,209 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Landing-Page</title>
-<meta name="description" content="">
-<meta name="author" content="">
+    <meta charset="utf-8">
+    <title>Landing-Page</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<!-- For Mobile devices  -->
-<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <!-- For Mobile devices  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 
-<!-- Css-->
-<link rel="stylesheet" href="css/bootstrap.css" />
-<link rel="stylesheet" href="css/bootstrap-responsive.css" />
-<link rel="stylesheet" href="css/font-awesome.min.css" />
-<link rel="stylesheet" href="css/custom.css" />
+    <!-- Css-->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
-<!-- JavaScripts -->
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.custom.72844.js"></script>
-<script>
+    <!-- JavaScripts -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.custom.72844.js"></script>
+    <script src="js/kwarkee.js"></script>
 
-</script>
 </head>
 
 <body>
-	<div class="container">
-    	
-        <!-- Header-->
-                                        <div class="row header-padd">
-                                                	<div class="span4">
-                                                    	<a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
-                                                    </div>
-                                                    <div class="span8">
-                                                      <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
-                                                        <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
-                                                        <a href="./how_it_works.html"><strong>How it Works</strong></a>
-                                                      </div>
+<div class="container">
 
-                                                      <div class="row">
-                                                          <div class="span8">
-                                                          	  <form action="" class="navbar-search">
-                                                      			<input type="text" class="search-query" placeholder="Search..." />
-                                                     		  </form>
-                                                              <ul class="inline pull-right btn-to-left">
-
-                                                                <li>
-                                                                	<a href="registration.html" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
-                                                                </li>
-
-                                                                <li class="dropdown b-top-marg">
-                                                                	<a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
-                                                                    	<i class="icon-user"></i> Sign In <strong class="caret"></strong>
-                                                                    </a>
-                                                                    <div class="dropdown-menu b-padd">
-                                                                    	<form action="" method="post" style="margin-bottom: 5px;">
-
-                                                                        	<div class="input-prepend">
-                                                                                <span class="add-on"><i class="icon-user"></i></span>
-                                                                             <input type="text" id="b-username" name="b-username" placeholder="username" class="input-medium" />
-                                                                             </div>
-
-                                                                             <div class="input-prepend">
-                                                                                <span class="add-on"><i class="icon-key"></i></span>
-                                                                                <input type="password" id="b-password" name="b-password" placeholder="password" class="input-medium" />
-                                                                              </div>
-
-
-                                                                             <!--<label class="checkbox">
-                                        										<input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
-                                        									</label>-->
-
-                                                                            <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block" value="Login" />
-
-                                                                        </form>
-                                                                    </div>
-                                                                </li>
-                                                              </ul>
-                                                           </div>
-                                                      </div>
-                                                   </div>
-                                                </div><!-- End Of Header -->
-        
+    <!-- Header-->
+    <div class="row header-padd">
+        <div class="span4">
+            <a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
         </div>
-        
-    <div class="b-cont-wide">  <!--Wide Mood Image With Contents of Header --> 
+        <div class="span8">
+            <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
+                <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
+                <a href="#!how_it_works"><strong>How it Works</strong></a>
+            </div>
+
+            <div class="row">
+                <div class="span8">
+                    <form id="kwarkee_search" action="" class="navbar-search">
+                        <input type="text" class="search-query" placeholder="Search..." />
+                    </form>
+                    <ul class="inline pull-right btn-to-left">
+
+                        <li>
+                            <a href="#!registration" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
+                        </li>
+
+                        <li class="dropdown b-top-marg">
+
+                            <!-- for unregistered users -->
+                            <a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
+                                <i class="icon-user"></i> Sign In <strong class="caret"></strong>
+                            </a>
+                            <div class="dropdown-menu b-padd">
+                                <form id="kwarkee_login" action="" method="post" style="margin-bottom: 5px;">
+
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-user"></i></span>
+                                        <input type="text" name="username" placeholder="username" class="input-medium" />
+                                    </div>
+
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-key"></i></span>
+                                        <input type="password" name="password" placeholder="password" class="input-medium" />
+                                    </div>
+
+
+                                    <!--<label class="checkbox">
+                                       <input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
+                                   </label>-->
+
+                                    <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block" value="Login" />
+
+                                </form>
+                            </div>
+                            <!-- END - for unregistered users -->
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Of Header -->
+
+</div>
+
+<div class="b-cont-wide">  <!--Wide Mood Image With Contents of Header -->
     <div class="b-inner-moodimage">
         <div class="container">
-        	<section>                        
+            <section>
                 <!--Create win win advertising -->
                 <div class="row">
                     <div class="b-moody-background">
-                    	
+
                         <div class="b-textbutton-cont">
                             <h1 class="text-center" style="font-size:44px;font-weight:normal;">
                                 Create win-win <strong>advertising</strong>
                             </h1>
                             <p class="text-center lead" style="margin-top:-0.5em; font-size:13px; color:#cecece;">
                                 <small>We help you to find your perfect match in guerrillia-marketing</small>
-                                <a href="#" class="btn btn-gray btn-small" style="padding:0.05em 0.7em;margin-left:0.3em;"><i class="icon-info-sign"></i> How it Works</a>
+                                <a href="#!how_it_works" class="btn btn-gray btn-small" style="padding:0.05em 0.7em;margin-left:0.3em;"><i class="icon-info-sign"></i> How it Works</a>
                             </p>
-                                        
-                             <ul class="inline text-center b-no-style">
-                                 <li class="b-relateive">
-                                    <input style="font-size:22px;" type="button" value="offer advertising" class="btn btn-large btn-yellow large-padd" />
+
+                            <ul class="inline text-center b-no-style">
+                                <li class="b-relateive">
+                                    <a href="#!browse-4a?type=requests" style="font-size:22px;" class="btn btn-large btn-yellow large-padd btn_browse_requests">offer advertising</a>
                                     <span class="label label-warning b-absolutebotmrght label-rounded">for individuals</span>
-                                 </li>
-                                 <li>
+                                </li>
+                                <li>
                                     <h4 class="muted">or</h4>
-                                    
-                                 </li>
-                                 <li class="b-relateive bttn-move-top">
-                                    <input style="font-size:22px;" type="button" value="expand your reach" class="btn btn-large btn-green large-padd" />
+
+                                </li>
+                                <li class="b-relateive bttn-move-top">
+                                    <a href="#!browse-4a?type=offers" style="font-size:22px;" class="btn btn-large btn-green large-padd">expand your reach</a>
                                     <span class="label label-important b-absolutebotmrght2 label-rounded">for agencies, brands &amp; businesses</span>
-                                 </li>
+                                </li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div><!--End Create win win... -->
-        </section>
-        
-        
+            </section>
+
+
         </div>
-    </div>    
-    </div><!--End Wide Mood Image With Contents of Header --> 
-        
-        <div class="container">
-        <!--Packs -->
-        <div class="row">
-        	
-            <div class="span6 b-relateive">
-            	
-                    <h3 class="text-right b-txt-underline" style="margin-bottom: 0.2em;"><span>featured brand &amp; business request</span></h3>
-                    <input type="button" value="browse more..." class="btn btn-gray pull-right btn-to-left"/>
-                    <div class="row b-equal-margin">
-                        <div class="span2 b-relateive">                		
-                            <img src="img/Offer.jpg" alt="Offer" class="img-polaroid" />
-                            <h5>Budwieser</h5>
-                            <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
-                            <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
-                        </div>
-                        <div class="span2 b-relateive"> 
-                            <img src="img/Offer.jpg" alt="Offer" class="img-polaroid" />
-                            <h5>Best Buy</h5>
-                            <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
-                            <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
-                        </div>
-                        <div class="span2 b-relateive">  
-                            <img src="img/Offer.jpg" alt="Offer" class="img-polaroid"/>
-                            <h5>Microsoft</h5>
-                            <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
-                            <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
-                        </div>
-                    </div>            
-               		
-                    <div class="b-absolute-ln-mood"></div>
-                
+    </div>
+</div><!--End Wide Mood Image With Contents of Header -->
+
+<div class="container">
+    <!--Packs -->
+    <div class="row">
+
+        <div class="span6 b-relateive">
+
+            <h3 class="text-right b-txt-underline" style="margin-bottom: 0.2em;"><span>featured brand &amp; business request</span></h3>
+            <a href="#!browse-4a?type=requests" class="btn btn-gray pull-right btn-to-left">browse more...</a>
+            <div class="row b-equal-margin">
+                <div class="span2 b-relateive">
+                    <img src="img/Offer.jpg" alt="Offer" class="img-polaroid" />
+                    <h5>Budwieser</h5>
+                    <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
+                    <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
+                </div>
+                <div class="span2 b-relateive">
+                    <img src="img/Offer.jpg" alt="Offer" class="img-polaroid" />
+                    <h5>Best Buy</h5>
+                    <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
+                    <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
+                </div>
+                <div class="span2 b-relateive">
+                    <img src="img/Offer.jpg" alt="Offer" class="img-polaroid"/>
+                    <h5>Microsoft</h5>
+                    <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
+                    <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
+                </div>
             </div>
-            
-            <div class="span6">
-            	<h3 class="text-left b-txt-underline" style="margin-bottom: 0.2em;"><span>featured advertising offers</span></h3>
-                <input type="button" value="browse more..." class="btn btn-gray pull-left btn-to-left"/>
-                <div class="row b-equal-margin">
-            		<div class="span2 b-relateive">                		
-                    	<img src="img/Offer.jpg" alt="Offer" class="img-polaroid"/>
-                        <h5>Public way NYC graffiti...</h5>
-                        <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
-                        <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
-                	</div>
-                    <div class="span2 b-relateive"> 
-                    	<img src="img/Offer.jpg" alt="Offer" class="img-polaroid" />
-                        <h5>Budwieser</h5>
-                        <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
-                        <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
-                	</div>
-                    <div class="span2 b-relateive">  
-                    	<img src="img/Offer.jpg" alt="Offer" class="img-polaroid"/>
-                        <h5>Budwieser</h5>
-                        <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
-                        <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
-                	</div>
-           		</div>
-            </div>              
-        </div><!--End Packs -->
-        
-        <hr/>
-        
-        
-        <!--Footer -->
-        <div class="row">
-        	<h4 class="text-center">Our Partners</h4>
-        	<div class="span12 b-img-spc">
-            	<img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
-                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
-                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
-                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
-                <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
-            </div>	
-        </div><!--End Footer -->
-        
-	</div><!--End Container -->
+
+            <div class="b-absolute-ln-mood"></div>
+
+        </div>
+
+        <div class="span6">
+            <h3 class="text-left b-txt-underline" style="margin-bottom: 0.2em;"><span>featured advertising offers</span></h3>
+            <a href="#!browse-4a?type=offers" class="btn btn-gray pull-left btn-to-left">browse more...</a>
+            <div class="row b-equal-margin">
+                <div class="span2 b-relateive">
+                    <img src="img/Offer.jpg" alt="Offer" class="img-polaroid"/>
+                    <h5>Public way NYC graffiti...</h5>
+                    <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
+                    <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
+                </div>
+                <div class="span2 b-relateive">
+                    <img src="img/Offer.jpg" alt="Offer" class="img-polaroid" />
+                    <h5>Budwieser</h5>
+                    <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
+                    <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
+                </div>
+                <div class="span2 b-relateive">
+                    <img src="img/Offer.jpg" alt="Offer" class="img-polaroid"/>
+                    <h5>Budwieser</h5>
+                    <p>Pacific saury--zebra loach kaluga codling dusky grouper common tunny Asiatic glassfish.</p>
+                    <span class=" label label-success b-absolute"><strong>500</strong> <i class="icon-dollar"></i></span>
+                </div>
+            </div>
+        </div>
+    </div><!--End Packs -->
+
+    <hr/>
+
+
+    <!--Footer -->
+    <div class="row">
+        <h4 class="text-center">Our Partners</h4>
+        <div class="span12 b-img-spc">
+            <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+            <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+            <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+            <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+            <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
+        </div>
+    </div><!--End Footer -->
+
+</div><!--End Container -->
 </body>
 
 </html>

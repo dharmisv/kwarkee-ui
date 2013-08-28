@@ -18,6 +18,7 @@
     <!-- JavaScripts -->
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/kwarkee.js"></script>
     <script>
         $(document).ready(function()
         {
@@ -30,40 +31,63 @@
 <div class="container">
 
     <!-- Header-->
-    <div class="row">
-        <div class="span4">
-            <img src="img/Logo.jpg" alt="Company Logo" />
-            Some tag line...
-        </div>
-        <div class="span8">
-            <ul class="inline pull-right btn-to-left">
-                <li><a href="#">Help</a> <span class="divider"> | </span></li>
-                <li><a href="#">How it Works</a></li>
-            </ul>
+        <div class="row header-padd">
+            <div class="span4">
+                <a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
+            </div>
+            <div class="span8">
+                <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
+                    <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
+                    <a href="#!how_it_works"><strong>How it Works</strong></a>
+                </div>
 
-            <div class="row">
-                <div class="span8">
-                    <!--<form action="" class="navbar-search">
-                      <input type="text" class="search-query" placeholder="Search..." />
-                   </form>-->
-                    <ul class="inline pull-right btn-to-left">
-                        <li>
-                            <div class="btn-group">
-                                <button class="btn">Frank Deering</button>
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a href="#">Settings</a></li>
-                                    <li><a href="#">logout</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="row">
+                    <div class="span8">
+                        <form id="kwarkee_search" action="" class="navbar-search">
+                            <input type="text" class="search-query" placeholder="Search..." />
+                        </form>
+                        <ul class="inline pull-right btn-to-left">
+
+                            <li>
+                                <a href="#!registration" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
+                            </li>
+
+                            <li class="dropdown b-top-marg">
+
+                                <!-- for unregistered users -->
+                                <a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
+                                    <i class="icon-user"></i> Sign In <strong class="caret"></strong>
+                                </a>
+                                <div class="dropdown-menu b-padd">
+                                    <form id="kwarkee_login" action="" method="post" style="margin-bottom: 5px;">
+
+                                        <div class="input-prepend">
+                                            <span class="add-on"><i class="icon-user"></i></span>
+                                            <input type="text" name="username" placeholder="username" class="input-medium" />
+                                        </div>
+
+                                        <div class="input-prepend">
+                                            <span class="add-on"><i class="icon-key"></i></span>
+                                            <input type="password" name="password" placeholder="password" class="input-medium" />
+                                        </div>
+
+
+                                        <!--<label class="checkbox">
+                                           <input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
+                                       </label>-->
+
+                                        <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block" value="Login" />
+
+                                    </form>
+                                </div>
+                                <!-- END - for unregistered users -->
+
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div><!-- End Of Header -->
+        </div><!-- End Of Header -->
 
 </div><!-- End Of Container -->
 
