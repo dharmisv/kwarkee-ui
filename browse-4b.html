@@ -31,63 +31,63 @@
 <div class="container">
 
     <!-- Header-->
-        <div class="row header-padd">
-            <div class="span4">
-                <a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
+    <div class="row header-padd">
+        <div class="span4">
+            <a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
+        </div>
+        <div class="span8">
+            <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
+                <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
+                <a href="#!how_it_works"><strong>How it Works</strong></a>
             </div>
-            <div class="span8">
-                <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
-                    <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
-                    <a href="#!how_it_works"><strong>How it Works</strong></a>
-                </div>
 
-                <div class="row">
-                    <div class="span8">
-                        <form id="kwarkee_search" action="" class="navbar-search">
-                            <input type="text" class="search-query" placeholder="Search..." />
-                        </form>
-                        <ul class="inline pull-right btn-to-left">
+            <div class="row">
+                <div class="span8">
+                    <form id="kwarkee_search" action="" class="navbar-search">
+                        <input type="text" class="search-query" placeholder="Search..." />
+                    </form>
+                    <ul class="inline pull-right btn-to-left">
 
-                            <li>
-                                <a href="#!registration" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
-                            </li>
+                        <li>
+                            <a href="#!registration" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
+                        </li>
 
-                            <li class="dropdown b-top-marg">
+                        <li class="dropdown b-top-marg">
 
-                                <!-- for unregistered users -->
-                                <a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
-                                    <i class="icon-user"></i> Sign In <strong class="caret"></strong>
-                                </a>
-                                <div class="dropdown-menu b-padd">
-                                    <form id="kwarkee_login" action="" method="post" style="margin-bottom: 5px;">
+                            <!-- for unregistered users -->
+                            <a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
+                                <i class="icon-user"></i> Sign In <strong class="caret"></strong>
+                            </a>
+                            <div class="dropdown-menu b-padd">
+                                <form id="kwarkee_login" action="" method="post" style="margin-bottom: 5px;">
 
-                                        <div class="input-prepend">
-                                            <span class="add-on"><i class="icon-user"></i></span>
-                                            <input type="text" name="username" placeholder="username" class="input-medium" />
-                                        </div>
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-user"></i></span>
+                                        <input type="text" name="username" placeholder="username" class="input-medium" />
+                                    </div>
 
-                                        <div class="input-prepend">
-                                            <span class="add-on"><i class="icon-key"></i></span>
-                                            <input type="password" name="password" placeholder="password" class="input-medium" />
-                                        </div>
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-key"></i></span>
+                                        <input type="password" name="password" placeholder="password" class="input-medium" />
+                                    </div>
 
 
-                                        <!--<label class="checkbox">
-                                           <input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
-                                       </label>-->
+                                    <!--<label class="checkbox">
+                                       <input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
+                                   </label>-->
 
-                                        <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block" value="Login" />
+                                    <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block" value="Login" />
 
-                                    </form>
-                                </div>
-                                <!-- END - for unregistered users -->
+                                </form>
+                            </div>
+                            <!-- END - for unregistered users -->
 
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div><!-- End Of Header -->
+        </div>
+    </div><!-- End Of Header -->
 
 </div><!-- End Of Container -->
 
@@ -109,8 +109,8 @@
                     </div>
                 </div>
             </section>
-		</div>            
-	</div>         
+        </div>
+    </div>
 </div><!--End Moody -->
 
 
@@ -126,35 +126,35 @@
     <div class="padd-browse-leftcontent">
 
         <form action="" method="" class="moveup">
-            <p class="well well-small">
-                Are you looking for <strong>cmapaigns</strong> or <strong> offers ?</strong>
+            <p class="well well-small" style="background-color:#fff">
+                Are you looking for advertising <strong>requests</strong> or <strong>offers?</strong>
                 <br/>
                 <select id="browse-looking-for" name="browse-looking-for" class="margin-top-browse input-medium">
-                    <option>campaigns</option>
+                    <option>requests</option>
                     <option>offers</option>
                     <option selected>both</option>
                 </select>
             </p>
 
-            <div class="well well-small">
+            <div class="well well-small" style="background-color:#fff">
                 <h3>Filters</h3>
                 <hr/>
 
-                <h4><strong>price</strong></h4>
+                <h4><strong>Price</strong></h4>
                 <div class="input-prepend input-append">
                     <span class="add-on">from</span>
-                    <input type="text" id="from-price" name="from-price" class="input-small" />
+                    <input type="text" id="from-price" name="filter_minprice" value="1" class="input-small" />
                     <span class="add-on"><i class="icon-dollar"></i></span>
                 </div>
                 <div class="input-prepend input-append">
                     <span class="add-on">to</span>
-                    <input type="text" id="to-price" name="to-price" class="input-small" />
+                    <input type="text" id="to-price" name="filter_maxprice" value="1000" class="input-small" />
                     <span class="add-on"><i class="icon-dollar"></i></span>
                 </div>
                 <hr/>
 
                 <h4><strong>Reach</strong></h4>
-                <select id="browse-reach" name="browse-reach" class="input-medium">
+                <select id="browse-reach" name="filter_reach" class="input-medium">
                     <option selected>city-wide</option>
                     <option>state-wide</option>
                     <option>nation-wide</option>
@@ -162,13 +162,14 @@
                 <hr/>
 
                 <h4><strong>Location</strong></h4>
-                <div class="input-prepend">
-                    <span class="add-on">near</span>
-                    <input type="text" id="browse-near" name="browse-near" class="input-small"/>
+                <div class="input-block-level">
+                    <!--<span class="add-on">near</span>
+                    <input type="text" id="browse-near" name="browse-near" class="input-small"/>-->
+                    <input type="text" id="browse-near" name="filter_location" placeholder="enter location.." class="input-small" style="width:90%"/>
                 </div>
                 <hr/>
 
-                <h4>Author rating</h4>
+                <!--<h4>Author rating</h4>
                 <div class="input-prepend">
                     <span class="add-on">at least</span>
                     <select id="browse-author-rate" name="browse-author-rate" class="input-medium">
@@ -179,17 +180,17 @@
                         <option>5 star</option>
                     </select>
                 </div>
-                <hr/>
+                <hr/>-->
 
                 <h4>Duration</h4>
                 <div class="input-prepend input-append">
                     <span class="add-on">from</span>
-                    <input type="text" id="browse-duratn-from" name="browse-duratn-from" class="input-small"/>
+                    <input type="text" id="browse-duratn-from" name="filter_minduration" value="1   " class="input-small"/>
                     <span class="add-on">days</span>
                 </div>
                 <div class="input-prepend input-append">
                     <span class="add-on">to</span>
-                    <input type="text" id="browse-duratn-to" name="browse-duratn-to" class="input-small"/>
+                    <input type="text" id="browse-duratn-to" name="filter_maxduration" value="100" class="input-small"/>
                     <span class="add-on">days</span>
                 </div>
                 <hr/>
@@ -204,7 +205,7 @@
 
     <div class="row"><!-- row one -->
         <div class="span7">
-            <a href="#" class="btn btn-warning margin-top-browse"><i class="icon-arrow-left"></i> back to search results</a>
+            <a href="#" class="btn btn-primary margin-top-browse"><i class="icon-arrow-left"></i> back to search results</a>
             <!--<input type="button" id="back-overview-3c1" name="back-overview-3c1" class="btn btn-inverse" value="back to campaign overview"/>-->
             <hr/>
             <h3>Campaign Title</h3>
@@ -212,8 +213,8 @@
             <div>
                 <span class="label label-success">120 <i class="icon-dollar"></i> </span>
                 <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
-                <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
-                <span class="label label-important"><i class="icon-group"></i> global</span>
+                <span class="label label-info"><i class="icon-time"></i> 4 days</span>
+                <span class="label label-info"><i class="icon-group"></i> global</span>
 
                 <!-- to be added in 2nd step
                 <p class="pull-right">
@@ -224,8 +225,8 @@
                 <span class="muted"><small><em>created 3 months ago</em></small></span>
             </div>
 
-            <br/>
-            <div id="campaign-images" class="carousel slide">
+            <img src="img/Slides-2.jpg"/>
+            <!--<div id="campaign-images" class="carousel slide">
                 <ol class="carousel-indicators">
                     <li data-target="#campaign-images" data-slide-to="0" class="active"></li>
                     <li data-target="#campaign-images" data-slide-to="1" ></li>
@@ -240,18 +241,18 @@
                 <a class="carousel-control left"  href="#campaign-images" data-slide="prev">&lsaquo;</a>
                 <a class="carousel-control right" href="#campaign-images" data-slide="next">&rsaquo;</a>
 
-            </div>
+            </div>-->
 
-            <div>
+            <div style="margin-top:15px">
                 Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet. Pumpkinseed rock cod tubeblenny; sandburrower zebra bullhead shark seatrout discus, Blacksmelt ghost carp candiru; stonefish butterflyfish. Cutlassfish poolfish trench, yellowfin surgeonfish lionfish Old World knifefish kuhli loach yellowfin cutthroat trout batfish, Asiatic glassfish goby longnose dace? Dwarf loach amago moray eel, grayling garden eel triplefin blenny; sandbar shark wolf-eel pelican gulper priapumfish ricefish parasitic catfish. Halosaur trench Rio Grande perch sailbearer barbel mouthbrooder. Sturgeon electric knifefish, butterflyfish Canthigaster rostrata, dojo loach pickerel frigate mackerel ridgehead Pacific albacore halfmoon saber-toothed blenny, tripod fish.
 
                 Striped burrfish wolffish tui chub grideye freshwater shark dorab, "emperor," armoured catfish; cownose ray swordtail redmouth whalefish tarwhine lefteye flounder, Australian grayling. Skipjack tuna bonito seamoth squarehead catfish queen danio pike characid Blind shark slender barracudina; grayling. Goatfish: haddock ricefish amur pike wels catfish bangus.
             </div>
 
-            <section>
+            <!--<section>
                 <hr/>
             </section>
-            <div class="row"><!--row two -->
+            <div class="row">
                 <div class="span5">
 
                     <h4>Something unclear? Just ask <i class="icon-smile"></i></h4>
@@ -272,21 +273,21 @@
                     </div>
                     <img src="img/profile-pic.jpg" alt="profile-Pic" class="img-polaroid"/>
                 </div>
-            </div>
+            </div>-->
             <!--End row two -->
         </div>
         <!--End Span7 -->
 
-        <div class="span2">
+        <div class="span2" style="margin-left: 15px;margin-top: 15px;">
             <!--Profile Top -->
             <div class="well well-small text-center">
                 <h4 class="undrln pull-left">offered by:</h4>
                 <p class="padd-top-4b" style="line-height:normal;">
                     <img  src="img/profile-pic.jpg" alt="Profile Pic" /><br/>
                     toobey_s <br/>
-                    <span class="muted" style="font-size:0.7em">from snata_cruz</span>
+                    <span class="muted" style="font-size:0.7em">from Santa Cruz</span>
                 </p>
-                <ul class="inline" style="margin-bottom:0;">
+                <!--<ul class="inline" style="margin-bottom:0;">
                     <li>
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
@@ -297,11 +298,11 @@
                 </ul>
                 <p class="muted" style="font-size:0.8em;">
                     (<strong>4,22</strong> / 7 ratings)
-                </p>
+                </p>-->
                 <p class="text-left" style="color:#666;font-size: 0.7em;line-height: normal;text-align: justify;">
                     Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet. Pumpkinseed rock cod tubeblenny; sandburrower zebra bullhead shark seatrout discus, Blacksmelt ghost carp candiru; stonefish(..)
                 </p>
-                <a href="#" class="btn btn-warning"><i class="icon-user-md"></i> view full profile</a>
+                <!--<a href="#" class="btn btn-warning"><i class="icon-user-md"></i> view full profile</a>-->
             </div><!--End Profile...-->
 
             <!--Community response -->

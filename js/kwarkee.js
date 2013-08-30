@@ -50,6 +50,9 @@ var _kwarkee = (function(){
         $('#kwarkee_login').submit(onUserLogin);
         //$('#kwarkee_logout').click();
         //$('#kwarkee_userprofile').submit();
+
+        $('#helplink').click(function(){alert("'Help' will be available soon. Meanwhile you can contact us via info@kwarkee.com")});
+        $('.header-padd img').attr('title', 'return to kwarkee landing page');
     });
 
     //--------- PUBLIC ---------
@@ -92,10 +95,12 @@ var _kwarkee = (function(){
         evt.preventDefault();
 
         sendApiRequest('user/signin', extractFormData(evt.target), onUserLoginResponse);
+        window.location.href = "./profile-3b."+template_filetype; //todo: just dummy fwrd
     }
 
     function onUserLoginResponse(data){
         console.log('login-response: ',data);
+
     }
 
 })();
