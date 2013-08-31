@@ -6,10 +6,24 @@
 "use strict";
 var _kwarkee = (function(){
 
-    var template_filetype = 'html';
+    var url_params;
 
-    var URL_PARAM_FIND = 'find';
-    var URL_PARAM_CAMPAIGN_TYPE = 'searchtype';
+    var TEMPLATE_FILETYPE = 'html';
+
+    var API_BASE = './api/';
+    var API_URLS = {
+        'signup': 'member/',
+        'signin': 'member/signin',
+        'update_profile': 'member/',
+        'logout': '',
+        'search':'',
+        'get_campaign_details': 'campagin/details',
+        'get_feat_campaigns': ''
+    };
+
+    var URL_PARAM_FIND = 'search_query';
+    var URL_PARAM_CAMPAIGN_ID = 'cpid';
+    var SEARCH_PAGE_URL = './browse-4a';
 
     $(function(){
 
@@ -22,7 +36,7 @@ var _kwarkee = (function(){
             if(link_href.match(/^#!/i)){
                 link_href = link_href.replace(/^#!/i,'');
                 var link_parts = link_href.split('?');
-                var new_link = link_parts[0] + '.' + template_filetype;
+                var new_link = link_parts[0] + '.' + TEMPLATE_FILETYPE;
                 if(link_parts.length > 1) new_link += '#'+link_parts[1];
 
                 link.attr('href', new_link );
@@ -31,12 +45,13 @@ var _kwarkee = (function(){
 
         //check for URL-params
         var url = window.location.href;
-        var url_params = url.replace(/[^#]+#?(?=[^#]*$)/i,'');
+        url_params = url.replace(/[^#]+#?(?=[^#]*$)/i,'');
+        var params_obj = {};
+
         if(url_params.length > 0){
             url_params = decodeURI( url_params );
 
             url_params = url_params.split('&');
-            var params_obj = {};
 
             for(var i=0; i < url_params.length; i++){
                 var key_value = url_params[i].split('=');
@@ -46,10 +61,29 @@ var _kwarkee = (function(){
             console.log('PARAMS:',params_obj)
         }
 
-        $('#kwarkee_search').submit(onUserQuickSearch);
+        //general listeners
+        
         $('#kwarkee_login').submit(onUserLogin);
-        //$('#kwarkee_logout').click();
-        //$('#kwarkee_userprofile').submit();
+        $('#kwarkee_logout').click(onUserLogout);
+
+        //if page has the browse-filters box
+        var search_filters = $('#browse_filters');
+        if(search_filters.length == 1){
+
+            var is_search_detail_view = ($('#campaign_details').length == 1);
+
+            applySearchState( params_obj, search_filters, is_search_detail_view );
+
+            search_filters.find('form').submit(onTriggerDetailSearch);
+            $('#kwarkee_search').submit(onTriggerDetailSearch);
+
+        }else{
+            //quicksearches from top menu
+            $('#kwarkee_search').submit(onUserQuickSearch);
+        }
+
+
+        //$('#kwarkee_userprofile').submit(); //todo
 
         $('#helplink').click(function(){alert("'Help' will be available soon. Meanwhile you can contact us via info@kwarkee.com")});
         $('.header-padd img').attr('title', 'return to kwarkee landing page');
@@ -65,9 +99,9 @@ var _kwarkee = (function(){
 
     function sendApiRequest(url, data, callback, send_as_get ){
         var send_as_post = (!send_as_get);
-        var url = './api/'+url;
+        var url = API_BASE + url;
 
-        alert('sending request to: '+url)
+        alert('sending request to: '+url+'  -  '+JSON.stringify(data));
         if(send_as_post) $.post(url, data, callback);
     }
 
@@ -83,24 +117,144 @@ var _kwarkee = (function(){
         return data_obj;
     }
 
+    function extractSearchData( form )
+    {
+        var filter_data = extractFormData(form);
+        filter_data['search_query'] = $('#browse-search-inpt').val();
+
+        return filter_data;
+    }
+    
+    function getSearchLinkParams( url_data_obj, include_detailview_id )
+    {
+        var params = [];
+
+        $.each(url_data_obj, function(key, value){
+            if(!include_detailview_id && key == URL_PARAM_CAMPAIGN_ID) return; //not search-relevant
+
+            params.push(key + '=' + encodeURI(value));
+        });
+
+        return '#' + params.join('&');
+    }
+
+    function applySearchState( url_params, browse_filters_wrap, is_search_detail_view )
+    {
+        //apply listener-btn to 'back-to-search'-btn
+        if(is_search_detail_view){
+            var back_to_search_results_btn = $('#campaign_details #back_to_search_results');
+
+            //only show back-button if search params are present (resp. user must have came from the search)
+            if(url_params.search_type || url_params[URL_PARAM_FIND]){
+                back_to_search_results_btn.attr('href', SEARCH_PAGE_URL+'.'+TEMPLATE_FILETYPE+getSearchLinkParams(url_params) );
+            }else{
+                back_to_search_results_btn.remove();
+            }
+        }
+
+        //set search type: offer, request or both
+        var browse_type_switch = browse_filters_wrap.find("#browse-looking-for");
+        if(url_params.search_type != null) browse_type_switch.val(url_params.search_type);
+
+        //trigger new search when changing campaign-type (offer/request)
+        browse_type_switch.change(function(evt){ $(evt.target).parents('form').submit(); });
+
+        //apply search-query
+        if(url_params[URL_PARAM_FIND] != null) $('#browse-search-inpt').val(url_params[URL_PARAM_FIND]);
+
+
+        var all_filter_params = ["filter_minprice", "filter_maxprice", "filter_reach", "filter_location", "filter_minduration", "filter_maxduration"];
+
+        //apply all filter values from URL-state
+        for(var i=0; i < all_filter_params.length; i++){
+            var filter_param = all_filter_params[i];
+
+            if(url_params[filter_param] != null){
+                browse_filters_wrap.find("*[name='"+filter_param+"']").val(url_params[filter_param]);
+            }
+        }
+
+        //trigger init-search
+        if(!is_search_detail_view) sendSearchRequest();
+        else{
+            var campaign_id = url_params[URL_PARAM_CAMPAIGN_ID];
+
+            sendApiRequest(API_URLS.get_campaign_details, {'campaign_id':campaign_id}, onReceivedCampaignData);
+        }
+    }
+
+    function sendSearchRequest()
+    {
+        var filter_data = extractSearchData($('#browse_filters form'));
+
+        //check if we're on a detail page (then redirect)
+        if($('#campaign_details').length == 1){
+            jumpToPage( SEARCH_PAGE_URL+'.'+TEMPLATE_FILETYPE+getSearchLinkParams(filter_data) );
+        }else{
+            sendApiRequest(API_URLS.search, filter_data, onSearchResults);
+            onSearchResults(); //todo: dummy fwrd
+        }
+    }
+
+    function jumpToPage( page_url )
+    {
+        window.location.href = page_url;
+    }
+
     //-------- LISTENER ---------
 
     function onUserQuickSearch(evt)
     {
         evt.preventDefault();
-        window.location.href = 'browse-4a.'+template_filetype+'#'+URL_PARAM_FIND+'='+encodeURI( $(evt.target).find('input').val() );
+        jumpToPage( 'browse-4a.'+TEMPLATE_FILETYPE+'#'+URL_PARAM_FIND+'='+encodeURI( $(evt.target).find('input').val() ));
     }
 
-    function onUserLogin(evt){
+    function onTriggerDetailSearch(evt)
+    {
+        evt.preventDefault();
+        sendSearchRequest();
+    }
+
+    function onSearchResults(data)
+    {
+        //todo: just dummy linking
+        var state_params = extractSearchData($('#browse_filters form'));
+        state_params[URL_PARAM_CAMPAIGN_ID] = Math.round(Math.random()*100);
+
+        var search_param_link = getSearchLinkParams( state_params, true );
+        var all_search_entrys = $('#search_results_wrap .search_result');
+
+        all_search_entrys.data('href', './browse-4b.'+TEMPLATE_FILETYPE+search_param_link);
+        all_search_entrys.click(function(evt){
+            evt.preventDefault();
+            jumpToPage( $(evt.currentTarget).data('href') );
+        });
+    }
+
+    function onReceivedCampaignData(data)
+    {
+        console.log('campaign-data: ',data);
+    }
+
+    function onUserLogin(evt)
+    {
         evt.preventDefault();
 
-        sendApiRequest('user/signin', extractFormData(evt.target), onUserLoginResponse);
-        window.location.href = "./profile-3b."+template_filetype; //todo: just dummy fwrd
+        sendApiRequest(API_URLS.signin, extractFormData(evt.target), onUserLoginResponse);
+        window.location.href = "./profile-3b."+TEMPLATE_FILETYPE; //todo: just dummy fwrd
     }
 
-    function onUserLoginResponse(data){
+    function onUserLoginResponse(data)
+    {
         console.log('login-response: ',data);
+    }
 
+    function onUserLogout(evt)
+    {
+        evt.preventDefault();
+
+        sendApiRequest(API_URLS.logout, extractFormData(evt.target), onUserLoginResponse); //todo: just dummy
+        window.location.href = "./"; //go back to landing-page
     }
 
 })();

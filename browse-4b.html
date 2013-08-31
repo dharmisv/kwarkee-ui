@@ -7,7 +7,7 @@
     <meta name="author" content="">
 
     <!-- For Mobile devices  -->
-    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=1280,initial-scale=1, maximum-scale=1">
 
     <!-- Css-->
     <link rel="stylesheet" href="css/bootstrap.css" />
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/custom.css" />
 
     <!-- JavaScripts -->
-    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/kwarkee.js"></script>
     <script>
@@ -43,9 +43,6 @@
 
             <div class="row">
                 <div class="span8">
-                    <form id="kwarkee_search" action="" class="navbar-search">
-                        <input type="text" class="search-query" placeholder="Search..." />
-                    </form>
                     <ul class="inline pull-right btn-to-left">
 
                         <li>
@@ -99,7 +96,7 @@
             <section>
                 <div class="row b-head-mood">
                     <div class="span12">
-                        <form action="">
+                        <form id="kwarkee_search" action="">
                             <div class="input-append input-prepend">
                                 <span class="add-on"><i class="icon-search"></i></span>
                                 <input type="text" id="browse-search-inpt" name="browse-search-inpt" class="input-large" placeholder="enter search phrase" />
@@ -129,10 +126,10 @@
             <p class="well well-small" style="background-color:#fff">
                 Are you looking for advertising <strong>requests</strong> or <strong>offers?</strong>
                 <br/>
-                <select id="browse-looking-for" name="browse-looking-for" class="margin-top-browse input-medium">
-                    <option>requests</option>
-                    <option>offers</option>
-                    <option selected>both</option>
+                <select id="browse-looking-for" name="search_type" class="margin-top-browse input-medium">
+                    <option value="both" selected>both</option>
+                    <option value="requests">requests</option>
+                    <option value="offers">offers</option>
                 </select>
             </p>
 
@@ -155,9 +152,10 @@
 
                 <h4><strong>Reach</strong></h4>
                 <select id="browse-reach" name="filter_reach" class="input-medium">
-                    <option selected>city-wide</option>
-                    <option>state-wide</option>
-                    <option>nation-wide</option>
+                    <option name="all" selected>all</option>
+                    <option name="city_wide">city-wide</option>
+                    <option name="state_wide">state-wide</option>
+                    <option name="nation_wide">nation-wide</option>
                 </select>
                 <hr/>
 
@@ -203,9 +201,9 @@
 
 <div class="span9">
 
-    <div class="row"><!-- row one -->
+    <div id="campaign_details" class="row"><!-- row one -->
         <div class="span7">
-            <a href="#" class="btn btn-primary margin-top-browse"><i class="icon-arrow-left"></i> back to search results</a>
+            <a href="#" id="back_to_search_results" class="btn btn-primary margin-top-browse"><i class="icon-arrow-left"></i> back to search results</a>
             <!--<input type="button" id="back-overview-3c1" name="back-overview-3c1" class="btn btn-inverse" value="back to campaign overview"/>-->
             <hr/>
             <h3>Campaign Title</h3>
