@@ -27,63 +27,63 @@
 <div class="container">
 
     <!-- Header-->
-        <div class="row header-padd">
-            <div class="span4">
-                <a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
+    <div class="row header-padd">
+        <div class="span4">
+            <a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
+        </div>
+        <div class="span8">
+            <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
+                <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
+                <a href="#!how_it_works"><strong>How it Works</strong></a>
             </div>
-            <div class="span8">
-                <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
-                    <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
-                    <a href="#!how_it_works"><strong>How it Works</strong></a>
-                </div>
 
-                <div class="row">
-                    <div class="span8">
-                        <form id="kwarkee_search" action="" class="navbar-search">
-                            <input type="text" class="search-query" placeholder="Search..." />
-                        </form>
-                        <ul class="inline pull-right btn-to-left">
+            <div class="row">
+                <div class="span8">
+                    <form id="kwarkee_search" action="" class="navbar-search">
+                        <input type="text" class="search-query" placeholder="Search..." />
+                    </form>
+                    <ul class="inline pull-right btn-to-left">
 
-                            <li>
-                                <a href="#!registration" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
-                            </li>
+                        <li>
+                            <a href="#!registration" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
+                        </li>
 
-                            <li class="dropdown b-top-marg">
+                        <li class="dropdown b-top-marg">
 
-                                <!-- for unregistered users -->
-                                <a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
-                                    <i class="icon-user"></i> Sign In <strong class="caret"></strong>
-                                </a>
-                                <div class="dropdown-menu b-padd">
-                                    <form id="kwarkee_login" action="" method="post" style="margin-bottom: 5px;">
+                            <!-- for unregistered users -->
+                            <a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
+                                <i class="icon-user"></i> Sign In <strong class="caret"></strong>
+                            </a>
+                            <div class="dropdown-menu b-padd">
+                                <form id="kwarkee_login" action="" method="post" style="margin-bottom: 5px;">
 
-                                        <div class="input-prepend">
-                                            <span class="add-on"><i class="icon-user"></i></span>
-                                            <input type="text" name="username" placeholder="username" class="input-medium" />
-                                        </div>
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-user"></i></span>
+                                        <input type="text" name="username" placeholder="username" class="input-medium" />
+                                    </div>
 
-                                        <div class="input-prepend">
-                                            <span class="add-on"><i class="icon-key"></i></span>
-                                            <input type="password" name="password" placeholder="password" class="input-medium" />
-                                        </div>
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-key"></i></span>
+                                        <input type="password" name="password" placeholder="password" class="input-medium" />
+                                    </div>
 
 
-                                        <!--<label class="checkbox">
-                                           <input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
-                                       </label>-->
+                                    <!--<label class="checkbox">
+                                       <input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
+                                   </label>-->
 
-                                        <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block" value="Login" />
+                                    <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block" value="Login" />
 
-                                    </form>
-                                </div>
-                                <!-- END - for unregistered users -->
+                                </form>
+                            </div>
+                            <!-- END - for unregistered users -->
 
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div><!-- End Of Header -->
+        </div>
+    </div><!-- End Of Header -->
 
 </div><!-- End Of Container -->
 
@@ -113,64 +113,75 @@
 
                             <ul class="inline text-center reg-space big-button" style="padding-left: 1.6em;text-align: left;">
                                 <li>
-                                    <input type="button" value="I'm an individual advertiser" class="btn btn-yellow btn-large" id="b-individual-plan" name="b-individual-plan" />  </li>
+                                    <input type="button" value="I'm an individual advertiser" class="btn btn-yellow btn-large" id="b-individual-plan" />  </li>
                                 <li><span class="lead muted" style="padding: 0.22em;">or</span></li>
                                 <li>
-                                    <input type="button" value="We're a brand / business" class="btn btn-green btn-large" id="b-firm-plan" name="b-firm-plan" />  					                        </li>
+                                    <input type="button" value="We're a brand / business" class="btn btn-green btn-large" id="b-firm-plan" />
+                                </li>
                             </ul>
 
                             <hr/>
-                            <p><span class="lead">2. <strong>Your profile data</strong>:</span></p>
+                            <div id="registration_data_wrap" style="display:none">
+                                <p><span class="lead">2. <strong>Your profile data</strong>:</span></p>
 
-                            <ul class="inline text-center big-button" style="display:none;">
-                                <li>
-                                    <input type="button" value="enter manually" class="btn btn-info btn-large" id="b-manual" name="b-manual" />
-                                </li>
-                                <li>
-                                    <span class="lead muted"> or connect with</span>
-                                </li>
-                                <li class="reg-space top-some">
-                                    <a href="" class="btn btn-info"><i class="icon-facebook-sign"></i> Facebook</a>
-                                    <a href="" class="btn btn-info"><i class="icon-linkedin-sign"></i> LinkedIn</a>
-                                    <!-- I have created button with anchor tag as well as input type use which ever you want-->
-                                    <!--<input type="button" value="Facebook" class="btn btn-info btn-large" id="b-facebbok" name="b-facebook" />
-                                  <input type="button" value="LinkedIn" class="btn btn-info btn-large" id="b-linkedin" name="b-linkedin" />-->
-                                </li>
-                            </ul>
+                                <ul class="inline text-center big-button" style="display:none;">
+                                    <li>
+                                        <input type="button" value="enter manually" class="btn btn-info btn-large" id="b-manual" name="b-manual" />
+                                    </li>
+                                    <li>
+                                        <span class="lead muted"> or connect with</span>
+                                    </li>
+                                    <li class="reg-space top-some">
+                                        <a href="" class="btn btn-info"><i class="icon-facebook-sign"></i> Facebook</a>
+                                        <a href="" class="btn btn-info"><i class="icon-linkedin-sign"></i> LinkedIn</a>
+                                        <!-- I have created button with anchor tag as well as input type use which ever you want-->
+                                        <!--<input type="button" value="Facebook" class="btn btn-info btn-large" id="b-facebbok" name="b-facebook" />
+                                      <input type="button" value="LinkedIn" class="btn btn-info btn-large" id="b-linkedin" name="b-linkedin" />-->
+                                    </li>
+                                </ul>
 
-                            <div class="reg-space reg-padd-left" >
-                                <form>
-                                    <label for="b-frm-username">Username / business name</label>
-                                    <div class="input-prepend" style="width:80%">
-                                        <span class="add-on"><i class="icon-user"></i></span>
-                                        <input type="text" class="input-xlarge" id="b-frm-username" name="b-frm-username" style="width:88%"/>
-                                    </div>
+                                <div class="reg-space reg-padd-left" >
+                                    <form id="registration_form">
+                                        <input type="hidden" name="user_type" />
 
-                                    <label for="b-frm-location">Your location / base</label>
-                                    <div class="input-prepend" style="width:80%">
-                                        <span class="add-on"><i class="icon-location-arrow"></i></span>
-                                        <input type="text" class="input-xlarge" id="b-frm-location" name="b-frm-location" style="width:88%"/>
-                                    </div>
+                                        <label for="b-frm-username">username / business name</label>
+                                        <div class="input-prepend" style="width:80%">
+                                            <span class="add-on"><i class="icon-user"></i></span>
+                                            <input type="text" class="input-xlarge" id="b-frm-username" name="username" style="width:88%"/>
+                                        </div>
 
-
-
-                                    <label for="b-frm-mail"><strong>e-mail</strong> <small><em>(won't be visible to anybody at anytime) </em></small> </label>
-                                    <div class="input-prepend" style="width:80%">
-                                        <span class="add-on"><i class="icon-envelope"></i></span>
-                                        <input type="email" class="input-xlarge" id="b-frm-mail" name="b-frm-location" style="width:88%"/>
-                                    </div>
+                                        <label for="b-frm-location">your location / base</label>
+                                        <div class="input-prepend" style="width:80%">
+                                            <span class="add-on"><i class="icon-location-arrow"></i></span>
+                                            <input type="text" class="input-xlarge" id="b-frm-location" name="location" style="width:88%"/>
+                                        </div>
 
 
-                                    <label for="b-frm-password">Password</em></small> </label>
-                                    <div class="input-prepend" style="width:80%">
-                                        <span class="add-on"><i class="icon-key"></i></span>
-                                        <input type="password" class="input-xlarge" id="b-frm-password" name="b-frm-password" style="width:88%"/>
-                                    </div>
 
-                                    <div class="reg-space-top">
-                                        <input type="submit" class="btn btn-success btn-large" id="b-frm-submit" name="b-frm-submit" value="create account!"/>
-                                    </div>
-                                </form>
+                                        <label for="b-frm-mail"><strong>e-mail</strong> <small><em>(won't be visible to anybody at anytime) </em></small> </label>
+                                        <div class="input-prepend" style="width:80%">
+                                            <span class="add-on"><i class="icon-envelope"></i></span>
+                                            <input type="email" class="input-xlarge" id="b-frm-mail" name="email" style="width:88%"/>
+                                        </div>
+
+
+                                        <label for="b-frm-password">password</em></small> </label>
+                                        <div class="input-prepend" style="width:80%">
+                                            <span class="add-on"><i class="icon-key"></i></span>
+                                            <input type="password" class="input-xlarge" id="b-frm-password" name="password" style="width:88%"/>
+                                        </div>
+
+                                        <label for="b-frm-password_rep">repeat password</em></small> </label>
+                                        <div class="input-prepend" style="width:80%">
+                                            <span class="add-on"><i class="icon-key"></i></span>
+                                            <input type="password" class="input-xlarge" id="b-frm-password_rep" name="repeat_password" style="width:88%"/>
+                                        </div>
+
+                                        <div class="reg-space-top">
+                                            <input type="submit" class="btn btn-success btn-large" id="b-frm-submit" name="b-frm-submit" value="create account!"/>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>  <!--End Of Registration... -->
@@ -187,7 +198,7 @@
             <hr/>
 
             <!--Footer -->
-            <div class="row">
+            <!--<div class="row">
                 <h4 class="text-center">Our Partners</h4>
                 <div class="span12 b-img-spc">
                     <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
@@ -196,7 +207,7 @@
                     <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
                     <img src="img/Footer-company.jpg" alt="Company" class="img-rounded" />
                 </div>
-            </div><!--End Footer -->
+            </div>--><!--End Footer -->
         </div>
     </div>
 </div><!--End Container -->

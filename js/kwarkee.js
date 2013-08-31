@@ -82,8 +82,19 @@ var _kwarkee = (function(){
             $('#kwarkee_search').submit(onUserQuickSearch);
         }
 
+        //registration page
+        var registration_form = $('#registration_form');
+        if(registration_form.length == 1){
+            $('#b-individual-plan').click(onSelectAccountType);
+            $('#b-firm-plan').click(onSelectAccountType);
+            registration_form.submit(onSubmitRegistration);
+        }
 
-        //$('#kwarkee_userprofile').submit(); //todo
+        //userprofile page
+        var userprofile_form = $('#kwarkee_userprofile');
+        if(userprofile_form.length == 1){
+            userprofile_form.submit(onEditUserProfile);
+        }
 
         $('#helplink').click(function(){alert("'Help' will be available soon. Meanwhile you can contact us via info@kwarkee.com")});
         $('.header-padd img').attr('title', 'return to kwarkee landing page');
@@ -255,6 +266,58 @@ var _kwarkee = (function(){
 
         sendApiRequest(API_URLS.logout, extractFormData(evt.target), onUserLoginResponse); //todo: just dummy
         window.location.href = "./"; //go back to landing-page
+    }
+
+    //---- registration ----
+    function onSelectAccountType(evt)
+    {
+        var target = $(evt.target);
+        var business_btn = $('#b-firm-plan');
+        var individual_btn = $('#b-individual-plan');
+
+        var is_business = (target.attr('id') == business_btn.attr('id'));
+        var register_type_field = $('#registration_form input[name="user_type"]');
+
+        if(is_business){
+            individual_btn.fadeTo(200,0.3);
+            business_btn.fadeTo(200,1);
+            register_type_field.val('business');
+        }else{
+            individual_btn.fadeTo(200,1);
+            business_btn.fadeTo(200,0.3);
+            register_type_field.val('advertiser');
+        }
+
+        $('#registration_data_wrap').slideDown();
+    }
+
+    function onSubmitRegistration(evt)
+    {
+        evt.preventDefault();
+
+        var register_data = extractFormData($('#registration_form'));
+        sendApiRequest( API_BASE+API_URLS.signup, register_data, onRegisterResponse );
+    }
+
+    function onRegisterResponse(data)
+    {
+        console.log(data);
+        alert("Great, your kwarkee account was created!")
+    }
+
+    //----- user profile -----
+    function onEditUserProfile(evt)
+    {
+        evt.preventDefault();
+
+        var profile_data = extractFormData($('#kwarkee_userprofile'));
+        sendApiRequest( API_BASE+API_URLS.update_profile, profile_data, onEditUserProfileResponse );
+    }
+
+    function onEditUserProfileResponse(data)
+    {
+        console.log(data);
+        alert("Your profile changes were saved successfully!");
     }
 
 })();
