@@ -252,12 +252,13 @@ var _kwarkee = (function(){
         evt.preventDefault();
 
         sendApiRequest(API_URLS.signin, extractFormData(evt.target), onUserLoginResponse);
-        window.location.href = "./profile-3b."+TEMPLATE_FILETYPE; //todo: just dummy fwrd
+
     }
 
     function onUserLoginResponse(data)
     {
         console.log('login-response: ',data);
+        window.location.href = "./profile-3b."+TEMPLATE_FILETYPE;
     }
 
     function onUserLogout(evt)
