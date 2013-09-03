@@ -17,7 +17,7 @@ var _kwarkee = (function(){
         'update_profile': 'member/',
         'logout': '',
         'search':'',
-        'get_campaign_details': 'campagin/details',
+        'get_campaign_details': 'campaign/details',
         'get_feat_campaigns': ''
     };
 
