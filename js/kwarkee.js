@@ -296,7 +296,7 @@ var _kwarkee = (function(){
         evt.preventDefault();
 
         var register_data = extractFormData($('#registration_form'));
-        sendApiRequest( API_BASE+API_URLS.signup, register_data, onRegisterResponse );
+        sendApiRequest( API_URLS.signup, register_data, onRegisterResponse );
     }
 
     function onRegisterResponse(data)
@@ -311,7 +311,7 @@ var _kwarkee = (function(){
         evt.preventDefault();
 
         var profile_data = extractFormData($('#kwarkee_userprofile'));
-        sendApiRequest( API_BASE+API_URLS.update_profile, profile_data, onEditUserProfileResponse );
+        sendApiRequest( API_URLS.update_profile, profile_data, onEditUserProfileResponse );
     }
 
     function onEditUserProfileResponse(data)
