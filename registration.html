@@ -100,7 +100,7 @@
                 <div class="row">
                     <!--Registration Form-->
                     <div class="span8">
-                        <div class="reg-all-padd-left">
+                        <div id="registration_content_wrap" class="reg-all-padd-left">
 
 
                             <h1 class="reg-space"><strong>Register</strong> your new <strong>kwarkee account</strong></h1>
@@ -171,7 +171,7 @@
                                             <input type="password" class="input-xlarge" id="b-frm-password" name="password" style="width:88%"/>
                                         </div>
 
-                                        <label for="b-frm-password_rep">repeat password</em></small> </label>
+                                        <label for="b-frm-password_rep">retype password</em></small> </label>
                                         <div class="input-prepend" style="width:80%">
                                             <span class="add-on"><i class="icon-key"></i></span>
                                             <input type="password" class="input-xlarge" id="b-frm-password_rep" name="repeat_password" style="width:88%"/>
@@ -183,6 +183,15 @@
                                     </form>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- success msg -->
+                        <div id="register_success_msg" style="display:none">
+                            <h1 class="reg-space">Great! <strong>kwarkee</strong> awaits you..</h1>
+
+                            <p>
+                                We sent you an e-mail to confirm your registration. You can <a href="#!profile-3b">jump into your profile here</a>!
+                            </p>
                         </div>
                     </div>  <!--End Of Registration... -->
 

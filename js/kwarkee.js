@@ -302,8 +302,11 @@ var _kwarkee = (function(){
 
     function onRegisterResponse(data)
     {
-        console.log(data);
-        alert("Great, your kwarkee account was created!")
+        var registration_content = $('#registration_content_wrap');
+        registration_content.empty();
+
+        registration_content.html($('#register_success_msg').html());
+        $(document).scrollTop(0);
     }
 
     //----- user profile -----
