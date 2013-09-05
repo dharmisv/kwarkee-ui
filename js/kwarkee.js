@@ -48,7 +48,7 @@ var _kwarkee = (function(){
         var feat_requests = $('#kwarkee_feat_requests');
         if(feat_requests.length == 1){
             sendApiRequest(API_URLS.get_feat_campaigns,{}, onFeaturedCampaignsResponse);
-            onFeaturedCampaignsResponse(); //todo: dummy
+            //onFeaturedCampaignsResponse(); //todo: dummy
         }
 
         //check for URL-params
@@ -213,7 +213,7 @@ var _kwarkee = (function(){
             var campaign_id = url_params[URL_PARAM_CAMPAIGN_ID];
 
             sendApiRequest(API_URLS.get_campaign_details, {'campaign_id':campaign_id}, onReceivedCampaignData);
-            onReceivedCampaignData();//todo: debug
+            //onReceivedCampaignData();//todo: debug
         }
     }
 
