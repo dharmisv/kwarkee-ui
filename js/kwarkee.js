@@ -16,9 +16,9 @@ var _kwarkee = (function(){
         'signin': 'member/signin',
         'update_profile': 'member/',
         'logout': '',
-        'search':'',
+        'search':'search/',
         'get_campaign_details': 'campaign/details',
-        'get_feat_campaigns': ''
+        'get_feat_campaigns': 'campaign/featured'
     };
 
     var URL_PARAM_FIND = 'search_query';
@@ -213,6 +213,7 @@ var _kwarkee = (function(){
             var campaign_id = url_params[URL_PARAM_CAMPAIGN_ID];
 
             sendApiRequest(API_URLS.get_campaign_details, {'campaign_id':campaign_id}, onReceivedCampaignData);
+            onReceivedCampaignData();//todo: debug
         }
     }
 
@@ -225,13 +226,41 @@ var _kwarkee = (function(){
             jumpToPage( SEARCH_PAGE_URL+'.'+TEMPLATE_FILETYPE+getSearchLinkParams(filter_data) );
         }else{
             sendApiRequest(API_URLS.search, filter_data, onSearchResults);
-            onSearchResults(); //todo: dummy fwrd
+
+            //todo: dummy
+            /*onSearchResults([
+                {
+                    "id": 21,
+                    "description": "some random description",
+                    "username": "dharmi",
+                    "duration": 4,
+                    "city": "San Francisco",
+                    "title": "Sports shop",
+                    "profileImage": "img/Offer.jpg",
+                    "bigImage": "",
+                    "price": 300,
+                    "categoryId": 0,
+                    "reachType": 'local',
+                    "zip": 0,
+                    "videoTitle": "",
+                    "videoUrl": "",
+                    "featured": false
+                }
+            ]);*/ //todo: dummy fwrd
         }
     }
 
     function jumpToPage( page_url )
     {
         window.location.href = page_url;
+    }
+
+    function applyCampaignBaseMetaInf( campaign_node, camapign_data )
+    {
+        campaign_node.find('.attr_price span').html( camapign_data.price);
+        campaign_node.find('.attr_location span').html( camapign_data.city);
+        campaign_node.find('.attr_duration span').html( camapign_data.duration+' days');
+        campaign_node.find('.attr_reach span').html( camapign_data.reachType);
     }
 
     //-------- LISTENER ---------
@@ -281,6 +310,9 @@ var _kwarkee = (function(){
         sendSearchRequest();
     }
 
+    /**
+     * @param data: array of result-objects
+     */
     function onSearchResults(data)
     {
         var state_params = extractSearchData($('#browse_filters form'));
@@ -290,41 +322,75 @@ var _kwarkee = (function(){
         search_res_wrap.html('<hr/>'); //empty first
 
         //output all search results
-        if(true){ //todo: only if results exist
+        if(data.length > 0){
 
-            var tmp_search_entry = dummy_search_entry.clone();
-            var tmp_state_params = $.extend({}, state_params); //clone
+            for(var i=0; i < data.length; i++){
+                var tmp_result_data = data[i];
+                var tmp_search_entry = dummy_search_entry.clone();
+                var tmp_state_params = $.extend({}, state_params); //clone
 
-            //apply detail link to the search result
-            tmp_state_params[URL_PARAM_CAMPAIGN_ID] = Math.round(Math.random()*100);
-            var search_param_link = getSearchLinkParams( tmp_state_params, true );
-            tmp_search_entry.click(function(evt){
-                jumpToPage( './browse-4b.'+TEMPLATE_FILETYPE+search_param_link );
-            });
+                //apply detail link to the search result
+                tmp_state_params[URL_PARAM_CAMPAIGN_ID] = tmp_result_data.id;
+                var search_param_link = getSearchLinkParams( tmp_state_params, true );
+                tmp_search_entry.click(function(evt){
+                    jumpToPage( './browse-4b.'+TEMPLATE_FILETYPE+search_param_link );
+                });
 
-            //todo: apply all the data of the search result from API
+                //todo: apply all the data of the search result from API
+                tmp_search_entry.find('.searchresult_preview_img').attr('src', 'img/Offer.jpg'); //todo: this was still missing in MODEL
 
-            tmp_search_entry.appendTo(search_res_wrap);
+                tmp_search_entry.find('.searchresult_title').html( tmp_result_data.title);
+                applyCampaignBaseMetaInf( tmp_search_entry, tmp_result_data);
+
+                tmp_search_entry.find('.searchresult_description').html( tmp_result_data.description );
+                tmp_search_entry.find('.searchresult_creator_img').attr( 'src', tmp_result_data.profileImage );
+
+                tmp_search_entry.appendTo(search_res_wrap);
+            }
 
         }else{
             $('<p>no results found for your search...</p>').appendTo(search_res_wrap);
         }
-
-        //state_params[URL_PARAM_CAMPAIGN_ID] = Math.round(Math.random()*100);
-
-        /*var search_param_link = getSearchLinkParams( state_params, true );
-        var all_search_entrys = $('#search_results_wrap .search_result');
-
-        all_search_entrys.data('href', './browse-4b.'+TEMPLATE_FILETYPE+search_param_link);
-        all_search_entrys.click(function(evt){
-            evt.preventDefault();
-            jumpToPage( $(evt.currentTarget).data('href') );
-        });*/
     }
 
     function onReceivedCampaignData(data)
     {
         console.log('campaign-data: ',data);
+
+        //todo: just dummy-data
+        /*data = {
+            "id": 21,
+            "description": "some random description",
+            "username": "dharmi",
+            "duration": 2,
+            "city": "San Jose",
+            "title": "Sports shop",
+            "profileImage": "img/profile-pic.jpg",
+            "bigImage": "img/Slides-2.jpg",
+            "price": 300,
+            "categoryId": 0,
+            "reachType": "local",
+            "zip": 0,
+            "videoTitle": "",
+            "videoUrl": "",
+            "featured": false
+        };*/
+
+        var campaign_details = $('#campaign_details');
+
+        //apply the detail-data
+        campaign_details.find('#campaign_data h3').html(data.title);
+        campaign_details.find('#campaign_data img').attr('src',data.bigImage);
+        campaign_details.find('#campaign_data #campaign_description').html(data.description);
+
+
+        applyCampaignBaseMetaInf(campaign_details, data);
+
+        //creator info
+        campaign_details.find('#creator_data img').attr( 'src', data.profileImage );
+        campaign_details.find('#creator_data .attr_creator_username').html( data.username );
+        campaign_details.find('#creator_data .attr_creator_location').html( data.city );
+        campaign_details.find('#creator_data .attr_creator_description').html( 'some random description of the user' ); //todo: missing in model
     }
 
     function onUserLogin(evt)
