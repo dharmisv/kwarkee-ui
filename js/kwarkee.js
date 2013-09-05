@@ -337,8 +337,7 @@ var _kwarkee = (function(){
 
     function onUserLoginResponse(data)
     {
-        console.log('login-response: ',data);
-        window.location.href = "./profile-3b."+TEMPLATE_FILETYPE;
+        jumpToPage("./profile-3b."+TEMPLATE_FILETYPE);
     }
 
     function onUserLogout(evt)
@@ -346,7 +345,7 @@ var _kwarkee = (function(){
         evt.preventDefault();
 
         sendApiRequest(API_URLS.logout, extractFormData(evt.target), onUserLoginResponse); //todo: just dummy
-        window.location.href = "./"; //go back to landing-page
+        jumpToPage('./'); //go back to landing-page
     }
 
     //---- registration ----
