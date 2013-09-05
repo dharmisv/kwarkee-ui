@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=1280,initial-scale=1, maximum-scale=1">
 
     <!-- Css-->
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/bootstrap-responsive.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
 
     <!-- JavaScripts -->
     <script src="js/jquery-1.10.2.min.js"></script>
@@ -27,62 +27,68 @@
 <div class="container">
 
     <!-- Header-->
-        <div class="row header-padd">
-            <div class="span4">
-                <a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace" /></a>
+    <div class="row header-padd">
+        <div class="span4">
+            <a href="./"><img src="img/logo.png" alt="kwarkee - creative advertising marketplace"/></a>
+        </div>
+        <div class="span8">
+            <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
+                <a id="helplink" href="#"
+                   style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
+                <a href="#!how_it_works"><strong>How it Works</strong></a>
             </div>
-            <div class="span8">
-                <div class="inline pull-right btn-to-left" style="margin-bottom:0.6em;padding-right:0.6em;">
-                    <a id="helplink" href="#" style="padding-right:0.45em;border-right: 1px solid #a2a2a2;margin-right:0.35em;">Help</a>
-                    <a href="#!how_it_works"><strong>How it Works</strong></a>
-                </div>
 
-                <div class="row">
-                    <div class="span8">
-                        <ul class="inline pull-right btn-to-left">
+            <div class="row">
+                <div class="span8">
+                    <ul class="inline pull-right btn-to-left">
 
-                            <li>
-                                <a href="#!registration" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
-                            </li>
+                        <li>
+                            <a href="#!registration" class="btn btn-primary"><i class="icon-smile"></i> Register</a>
+                        </li>
 
-                            <li class="dropdown b-top-marg">
+                        <li class="dropdown b-top-marg">
 
-                                <!-- for unregistered users -->
-                                <a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
-                                    <i class="icon-user"></i> Sign In <strong class="caret"></strong>
-                                </a>
-                                <div class="dropdown-menu b-padd">
-                                    <form id="kwarkee_login" action="" method="post" style="margin-bottom: 5px;">
+                            <!-- for unregistered users -->
+                            <a href="" class="dropdown-toggle btn btn-success" data-toggle="dropdown">
+                                <i class="icon-user"></i> Sign In <strong class="caret"></strong>
+                            </a>
 
-                                        <div class="input-prepend">
-                                            <span class="add-on"><i class="icon-user"></i></span>
-                                            <input type="text" name="username" placeholder="username" class="input-medium" />
-                                        </div>
+                            <div class="dropdown-menu b-padd">
+                                <form id="kwarkee_login" action="" method="post" style="margin-bottom: 5px;">
 
-                                        <div class="input-prepend">
-                                            <span class="add-on"><i class="icon-key"></i></span>
-                                            <input type="password" name="password" placeholder="password" class="input-medium" />
-                                        </div>
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-user"></i></span>
+                                        <input type="text" name="username" placeholder="username" class="input-medium"/>
+                                    </div>
+
+                                    <div class="input-prepend">
+                                        <span class="add-on"><i class="icon-key"></i></span>
+                                        <input type="password" name="password" placeholder="password"
+                                               class="input-medium"/>
+                                    </div>
 
 
-                                        <!--<label class="checkbox">
-                                           <input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
-                                       </label>-->
+                                    <!--<label class="checkbox">
+                                       <input type="checkbox" id="b-remember" name="b-remember" placeholder="remember"  /> Remember me
+                                   </label>-->
 
-                                        <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block" value="Login" />
+                                    <input type="submit" id="b-login" name="b-login" class="btn btn-success btn-block"
+                                           value="Login"/>
 
-                                    </form>
-                                </div>
-                                <!-- END - for unregistered users -->
+                                </form>
+                            </div>
+                            <!-- END - for unregistered users -->
 
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div><!-- End Of Header -->
+        </div>
+    </div>
+    <!-- End Of Header -->
 
-</div><!-- End Of Container -->
+</div>
+<!-- End Of Container -->
 
 <!--Moody, Text and Search box  -->
 <div class="mood-low">
@@ -94,16 +100,18 @@
                         <form id="kwarkee_search" action="">
                             <div class="input-append input-prepend">
                                 <span class="add-on"><i class="icon-search"></i></span>
-                                <input type="text" id="browse-search-inpt" name="browse-search-inpt" class="input-large" placeholder="enter search phrase" />
-                                <input type="submit" class="btn btn-info" value="find!" />
+                                <input type="text" id="browse-search-inpt" name="browse-search-inpt" class="input-large"
+                                       placeholder="enter search phrase"/>
+                                <input type="submit" class="btn btn-info" value="find!"/>
                             </div>
                         </form>
                     </div>
                 </div>
             </section>
-    	</div>        
-	</div>
-</div><!--End Moody -->
+        </div>
+    </div>
+</div>
+<!--End Moody -->
 
 
 <!-- Campaign Browse-->
@@ -133,14 +141,15 @@
                 <hr/>
 
                 <h4><strong>Price</strong></h4>
+
                 <div class="input-prepend input-append">
                     <span class="add-on">from</span>
-                    <input type="text" id="from-price" name="filter_minprice" value="1" class="input-small" />
+                    <input type="text" id="from-price" name="filter_minprice" value="1" class="input-small"/>
                     <span class="add-on"><i class="icon-dollar"></i></span>
                 </div>
                 <div class="input-prepend input-append">
                     <span class="add-on">to</span>
-                    <input type="text" id="to-price" name="filter_maxprice" value="1000" class="input-small" />
+                    <input type="text" id="to-price" name="filter_maxprice" value="1000" class="input-small"/>
                     <span class="add-on"><i class="icon-dollar"></i></span>
                 </div>
                 <hr/>
@@ -155,10 +164,12 @@
                 <hr/>
 
                 <h4><strong>Location</strong></h4>
+
                 <div class="input-block-level">
                     <!--<span class="add-on">near</span>
                     <input type="text" id="browse-near" name="browse-near" class="input-small"/>-->
-                    <input type="text" id="browse-near" name="filter_location" placeholder="enter location.." class="input-small" style="width:90%"/>
+                    <input type="text" id="browse-near" name="filter_location" placeholder="enter location.."
+                           class="input-small" style="width:90%"/>
                 </div>
                 <hr/>
 
@@ -176,9 +187,11 @@
                 <hr/>-->
 
                 <h4>Duration</h4>
+
                 <div class="input-prepend input-append">
                     <span class="add-on">from</span>
-                    <input type="text" id="browse-duratn-from" name="filter_minduration" value="1   " class="input-small"/>
+                    <input type="text" id="browse-duratn-from" name="filter_minduration" value="1   "
+                           class="input-small"/>
                     <span class="add-on">days</span>
                 </div>
                 <div class="input-prepend input-append">
@@ -187,12 +200,14 @@
                     <span class="add-on">days</span>
                 </div>
                 <hr/>
-                <input type="submit" id="browse-apply-filter" name="browse-apply-filter" value="apply filters" class="btn btn-primary btn-block"/>
+                <input type="submit" id="browse-apply-filter" name="browse-apply-filter" value="apply filters"
+                       class="btn btn-primary btn-block"/>
             </div>
         </form>
 
     </div>
-</div><!--End Span3 -->
+</div>
+<!--End Span3 -->
 
 
 <div id="search_results_wrap" class="span9">
@@ -213,8 +228,19 @@
             </select>
         </div>
     </div>-->
-    <hr/>
 
+    <!--<div class="pagination pagination-centered">
+        <ul>
+            <li class="disabled"><a href="#"><i class="icon-chevron-left"></i> Prev</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">Next <i class="icon-chevron-right"></i></a></li>
+        </ul>
+    </div>-->
+</div>
+
+<div id="kwarkee_search_result_dummy" style="display:none;">
     <div class="row over-color padd-browse-both search_result">
         <div class="media span7">
             <a class="pull-left" href="#">
@@ -255,142 +281,11 @@
         </div>
     </div>
     <hr/>
+</div>
+<!--End Span9 -->
 
-    <div class="row over-color padd-browse-both search_result">
-        <div class="media span7">
-            <a class="pull-left" href="#">
-                <img class="media-object" src="img/Browse-Left-img.jpg" alt="Browse-Campaign" />
-            </a>
-            <div class="media-body">
-                <h4 class="media-heading">Campaign Title</h4>
-                <div>
-                    <ul class="inline">
-                        <li>
-                            <span class="label label-success">120 <i class="icon-dollar"></i></span>
-                            <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
-                            <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
-                            <span class="label label-important"><i class="icon-group"></i> global</span>
-                        </li>
-                    </ul>
-                </div>
-                <p>Description of campaign.Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet.Dwarf loach amago moray eel.</p>
-                <small class="muted"><em>created 3 months ago</em></small>
-            </div>
-        </div>
-        <div class="span2 text-center browse-cntnt-toleft">
-            <img src="img/Small-Profile.jpg" alt="Browse-Small-Profile" />
-            <div class="browse-rate-relt">
-                <div class="browse-abosl2">
-                    <ul class="inline">
-                        <li>
-                            <i class="icon-star"></i>
-                            <i class="icon-star"></i>
-                            <i class="icon-star"></i>
-                            <i class="icon-star-half-empty"></i>
-                            <i class="icon-star-empty"></i>
-                        </li>
-                    </ul>
-                    <small><em>(7 rating)</em></small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr/>
-
-    <div class="row over-color padd-browse-both search_result">
-        <div class="media span7">
-            <a class="pull-left" href="#">
-                <img class="media-object" src="img/Browse-Left-img.jpg" alt="Browse-Campaign" />
-            </a>
-            <div class="media-body">
-                <h4 class="media-heading">Campaign Title</h4>
-                <div>
-                    <ul class="inline">
-                        <li>
-                            <span class="label label-success">120 <i class="icon-dollar"></i></span>
-                            <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
-                            <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
-                            <span class="label label-important"><i class="icon-group"></i> global</span>
-                        </li>
-                    </ul>
-                </div>
-                <p>Description of campaign.Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet.Dwarf loach amago moray eel.</p>
-                <small class="muted"><em>created 3 months ago</em></small>
-            </div>
-        </div>
-        <div class="span2 text-center browse-cntnt-toleft">
-            <img src="img/Small-Profile.jpg" alt="Browse-Small-Profile" />
-            <div class="browse-rate-relt">
-                <div class="browse-abosl2">
-                    <ul class="inline">
-                        <li>
-                            <i class="icon-star"></i>
-                            <i class="icon-star"></i>
-                            <i class="icon-star"></i>
-                            <i class="icon-star-half-empty"></i>
-                            <i class="icon-star-empty"></i>
-                        </li>
-                    </ul>
-                    <small><em>(7 rating)</em></small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr/>
-
-    <div class="row over-color padd-browse-both search_result">
-        <div class="media span7">
-            <a class="pull-left" href="#">
-                <img class="media-object" src="img/Browse-Left-img.jpg" alt="Browse-Campaign" />
-            </a>
-            <div class="media-body">
-                <h4 class="media-heading">Campaign Title</h4>
-                <div>
-                    <ul class="inline">
-                        <li>
-                            <span class="label label-success">120 <i class="icon-dollar"></i></span>
-                            <span class="label label-info"><i class="icon-flag-alt"></i> New York</span>
-                            <span class="label label-warning"><i class="icon-time"></i> 4 days</span>
-                            <span class="label label-important"><i class="icon-group"></i> global</span>
-                        </li>
-                    </ul>
-                </div>
-                <p>Description of campaign.Monkfish pike gulf menhaden ilisha deep sea eel ribbon sawtail fish ayu Blind goby freshwater hatchetfish, horsefish gray mullet.Dwarf loach amago moray eel.</p>
-                <small class="muted"><em>created 3 months ago</em></small>
-            </div>
-        </div>
-        <div class="span2 text-center browse-cntnt-toleft">
-            <img src="img/Small-Profile.jpg" alt="Browse-Small-Profile" />
-            <div class="browse-rate-relt">
-                <div class="browse-abosl2">
-                    <ul class="inline">
-                        <li>
-                            <i class="icon-star"></i>
-                            <i class="icon-star"></i>
-                            <i class="icon-star"></i>
-                            <i class="icon-star-half-empty"></i>
-                            <i class="icon-star-empty"></i>
-                        </li>
-                    </ul>
-                    <small><em>(7 rating)</em></small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr/>
-
-    <!--<div class="pagination pagination-centered">
-        <ul>
-            <li class="disabled"><a href="#"><i class="icon-chevron-left"></i> Prev</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">Next <i class="icon-chevron-right"></i></a></li>
-        </ul>
-    </div>-->
-</div><!--End Span9 -->
-
-</div><!--End Campaign Browse -->
+</div>
+<!--End Campaign Browse -->
 </section>
 
 <!--<hr/>  -->
@@ -398,7 +293,8 @@
 <!--Footer -->
 <!--End Footer -->
 
-</div><!--End Container -->
+</div>
+<!--End Container -->
 </body>
 
 </html>

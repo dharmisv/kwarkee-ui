@@ -283,18 +283,43 @@ var _kwarkee = (function(){
 
     function onSearchResults(data)
     {
-        //todo: just dummy linking
         var state_params = extractSearchData($('#browse_filters form'));
-        state_params[URL_PARAM_CAMPAIGN_ID] = Math.round(Math.random()*100);
+        var search_res_wrap = $('#search_results_wrap');
+        var dummy_search_entry = $('#kwarkee_search_result_dummy > div');
 
-        var search_param_link = getSearchLinkParams( state_params, true );
+        search_res_wrap.html('<hr/>'); //empty first
+
+        //output all search results
+        if(true){ //todo: only if results exist
+
+            var tmp_search_entry = dummy_search_entry.clone();
+            var tmp_state_params = $.extend({}, state_params); //clone
+
+            //apply detail link to the search result
+            tmp_state_params[URL_PARAM_CAMPAIGN_ID] = Math.round(Math.random()*100);
+            var search_param_link = getSearchLinkParams( tmp_state_params, true );
+            tmp_search_entry.click(function(evt){
+                jumpToPage( './browse-4b.'+TEMPLATE_FILETYPE+search_param_link );
+            });
+
+            //todo: apply all the data of the search result from API
+
+            tmp_search_entry.appendTo(search_res_wrap);
+
+        }else{
+            $('<p>no results found for your search...</p>').appendTo(search_res_wrap);
+        }
+
+        //state_params[URL_PARAM_CAMPAIGN_ID] = Math.round(Math.random()*100);
+
+        /*var search_param_link = getSearchLinkParams( state_params, true );
         var all_search_entrys = $('#search_results_wrap .search_result');
 
         all_search_entrys.data('href', './browse-4b.'+TEMPLATE_FILETYPE+search_param_link);
         all_search_entrys.click(function(evt){
             evt.preventDefault();
             jumpToPage( $(evt.currentTarget).data('href') );
-        });
+        });*/
     }
 
     function onReceivedCampaignData(data)
