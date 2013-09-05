@@ -24,6 +24,7 @@ var _kwarkee = (function(){
     var URL_PARAM_FIND = 'search_query';
     var URL_PARAM_CAMPAIGN_ID = 'cpid';
     var SEARCH_PAGE_URL = './browse-4a';
+    var DETAIL_PAGE_URL = './browse-4b';
 
     $(function(){
 
@@ -42,6 +43,13 @@ var _kwarkee = (function(){
                 link.attr('href', new_link );
             }
         });
+
+        //featured campaigns on landing-page
+        var feat_requests = $('#kwarkee_feat_requests');
+        if(feat_requests.length == 1){
+            sendApiRequest(API_URLS.get_feat_campaigns,{}, onFeaturedCampaignsResponse);
+            onFeaturedCampaignsResponse(); //todo: dummy
+        }
 
         //check for URL-params
         var url = window.location.href;
@@ -107,6 +115,20 @@ var _kwarkee = (function(){
 
 
     //--------- PRIVATE ---------
+
+    function applyFeatCampaignData( feat_campaign_node, container_node, campaign_data )
+    {
+
+        feat_campaign_node.find('img').attr('src', campaign_data.image);
+        feat_campaign_node.find('.price').html( campaign_data.price );
+        feat_campaign_node.find('h5').html(campaign_data.title);
+        feat_campaign_node.find('p').html(campaign_data.description);
+        feat_campaign_node.appendTo(container_node);
+
+        feat_campaign_node.click(function(evt){
+            jumpToPage( DETAIL_PAGE_URL + '.' + TEMPLATE_FILETYPE + '#'+URL_PARAM_CAMPAIGN_ID+'='+campaign_data.campaign_id );
+        })
+    }
 
     function sendApiRequest(url, data, callback, send_as_get ){
         var send_as_post = (!send_as_get);
@@ -213,6 +235,39 @@ var _kwarkee = (function(){
     }
 
     //-------- LISTENER ---------
+
+    function onFeaturedCampaignsResponse(data)
+    {
+        var feat_offers = $('#kwarkee_feat_offers');
+        var feat_requests = $('#kwarkee_feat_requests');
+        var ref_feat_entry = $('#dummy_feat_campaign > div');
+
+        for(var i=0; i < 3; i++){
+            var new_entry = ref_feat_entry.clone();
+
+            //todo: use API-data
+            applyFeatCampaignData( new_entry, feat_offers, {
+                'image': 'img/Offer.jpg',
+                'title': 'random title',
+                'price': Math.round(Math.random()*900),
+                'description': 'description random',
+                'campaign_id': Math.round(Math.random()*88)
+            } );
+        }
+
+        for(var i=0; i < 3; i++){
+            var new_entry = ref_feat_entry.clone();
+
+            //todo: use API-data
+            applyFeatCampaignData( new_entry, feat_requests, {
+                'image': 'img/Offer.jpg',
+                'title': 'random title',
+                'price': Math.round(Math.random()*900),
+                'description': 'description random',
+                'campaign_id': Math.round(Math.random()*88)
+            } );
+        }
+    }
 
     function onUserQuickSearch(evt)
     {
