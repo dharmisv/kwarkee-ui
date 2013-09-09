@@ -119,10 +119,10 @@ var _kwarkee = (function(){
     function applyFeatCampaignData( feat_campaign_node, container_node, campaign_data )
     {
 
-        feat_campaign_node.find('img').attr('src', campaign_data.image);
-        feat_campaign_node.find('.price').html( campaign_data.price );
-        feat_campaign_node.find('h5').html(campaign_data.title);
-        feat_campaign_node.find('p').html(campaign_data.description);
+        feat_campaign_node.find('img').attr('src', campaign_data.campaign_thumb_image);
+        feat_campaign_node.find('.price').html( campaign_data.campaign_price );
+        feat_campaign_node.find('h5').html(campaign_data.campaign_title);
+        feat_campaign_node.find('p').html(campaign_data.campaign_description);
         feat_campaign_node.appendTo(container_node);
 
         feat_campaign_node.click(function(evt){
@@ -257,44 +257,38 @@ var _kwarkee = (function(){
 
     function applyCampaignBaseMetaInf( campaign_node, camapign_data )
     {
-        campaign_node.find('.attr_price span').html( camapign_data.price);
-        campaign_node.find('.attr_location span').html( camapign_data.city);
-        campaign_node.find('.attr_duration span').html( camapign_data.duration+' days');
-        campaign_node.find('.attr_reach span').html( camapign_data.reachType);
+        campaign_node.find('.attr_price span').html( camapign_data.campaign_price);
+        campaign_node.find('.attr_location span').html( camapign_data.campaign_location);
+        campaign_node.find('.attr_duration span').html( camapign_data.campaign_duration+' days');
+        campaign_node.find('.attr_reach span').html( camapign_data.campaign_reach);
     }
 
     //-------- LISTENER ---------
 
-    function onFeaturedCampaignsResponse(data)
+    function onFeaturedCampaignsResponse(feat_campaigns_data)
     {
         var feat_offers = $('#kwarkee_feat_offers');
         var feat_requests = $('#kwarkee_feat_requests');
         var ref_feat_entry = $('#dummy_feat_campaign > div');
 
-        for(var i=0; i < 3; i++){
+        var offers_added = 0;
+        var requests_added = 0;
+
+        for(var i=0; i < feat_campaigns_data.length; i++){
             var new_entry = ref_feat_entry.clone();
+            var campaign_data = feat_campaigns_data[i];
+            var is_ad_offer = (campaign_data.userType == 'offer');
+            var campaign_container = null;
 
-            //todo: use API-data
-            applyFeatCampaignData( new_entry, feat_offers, {
-                'image': 'img/Offer.jpg',
-                'title': 'random title',
-                'price': Math.round(Math.random()*900),
-                'description': 'description random',
-                'campaign_id': Math.round(Math.random()*88)
-            } );
-        }
+            if(is_ad_offer && offers_added < 3){
+                campaign_container = feat_offers;
+            }else if(!is_ad_offer && requests_added < 3){
+                campaign_container = feat_requests;
+            }else{
+                continue;
+            }
 
-        for(var i=0; i < 3; i++){
-            var new_entry = ref_feat_entry.clone();
-
-            //todo: use API-data
-            applyFeatCampaignData( new_entry, feat_requests, {
-                'image': 'img/Offer.jpg',
-                'title': 'random title',
-                'price': Math.round(Math.random()*900),
-                'description': 'description random',
-                'campaign_id': Math.round(Math.random()*88)
-            } );
+            applyFeatCampaignData( new_entry, campaign_container, feat_campaigns_data);
         }
     }
 
@@ -330,20 +324,19 @@ var _kwarkee = (function(){
                 var tmp_state_params = $.extend({}, state_params); //clone
 
                 //apply detail link to the search result
-                tmp_state_params[URL_PARAM_CAMPAIGN_ID] = tmp_result_data.id;
+                tmp_state_params[URL_PARAM_CAMPAIGN_ID] = tmp_result_data.campaign_id;
                 var search_param_link = getSearchLinkParams( tmp_state_params, true );
                 tmp_search_entry.click(function(evt){
                     jumpToPage( './browse-4b.'+TEMPLATE_FILETYPE+search_param_link );
                 });
 
-                //todo: apply all the data of the search result from API
-                tmp_search_entry.find('.searchresult_preview_img').attr('src', 'img/Offer.jpg'); //todo: this was still missing in MODEL
+                tmp_search_entry.find('.searchresult_preview_img').attr('src', tmp_result_data.campaign_thumb_image);
 
-                tmp_search_entry.find('.searchresult_title').html( tmp_result_data.title);
+                tmp_search_entry.find('.searchresult_title').html( tmp_result_data.campaign_title);
                 applyCampaignBaseMetaInf( tmp_search_entry, tmp_result_data);
 
-                tmp_search_entry.find('.searchresult_description').html( tmp_result_data.description );
-                tmp_search_entry.find('.searchresult_creator_img').attr( 'src', tmp_result_data.profileImage );
+                tmp_search_entry.find('.searchresult_description').html( tmp_result_data.campaign_description );
+                tmp_search_entry.find('.searchresult_creator_img').attr( 'src', tmp_result_data.creator_profile_image );
 
                 tmp_search_entry.appendTo(search_res_wrap);
             }
@@ -379,18 +372,18 @@ var _kwarkee = (function(){
         var campaign_details = $('#campaign_details');
 
         //apply the detail-data
-        campaign_details.find('#campaign_data h3').html(data.title);
-        campaign_details.find('#campaign_data img').attr('src',data.bigImage);
-        campaign_details.find('#campaign_data #campaign_description').html(data.description);
+        campaign_details.find('#campaign_data h3').html(data.campaign_title);
+        campaign_details.find('#campaign_data img').attr('src',data.campaign_big_image);
+        campaign_details.find('#campaign_data #campaign_description').html(data.campaign_description);
 
 
         applyCampaignBaseMetaInf(campaign_details, data);
 
         //creator info
-        campaign_details.find('#creator_data img').attr( 'src', data.profileImage );
-        campaign_details.find('#creator_data .attr_creator_username').html( data.username );
-        campaign_details.find('#creator_data .attr_creator_location').html( data.city );
-        campaign_details.find('#creator_data .attr_creator_description').html( 'some random description of the user' ); //todo: missing in model
+        campaign_details.find('#creator_data img').attr( 'src', data.creator_profile_image );
+        campaign_details.find('#creator_data .attr_creator_username').html( data.creator_username );
+        campaign_details.find('#creator_data .attr_creator_location').html( data.creator_location );
+        campaign_details.find('#creator_data .attr_creator_description').html( data.creator_description );
     }
 
     function onUserLogin(evt)
