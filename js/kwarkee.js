@@ -135,6 +135,7 @@ var _kwarkee = (function(){
         var url = API_BASE + url;
 
         //alert('sending request to: '+url+'  -  '+JSON.stringify(data));
+        console.log('sending request to: '+url+'  -  '+JSON.stringify(data));
         if(send_as_post) $.post(url, data, callback);
     }
 
