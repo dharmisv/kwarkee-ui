@@ -283,8 +283,10 @@ var _kwarkee = (function(){
 
             if(is_ad_offer && offers_added < 3){
                 campaign_container = feat_offers;
+                offers_added++;
             }else if(!is_ad_offer && requests_added < 3){
                 campaign_container = feat_requests;
+                requests_added++;
             }else{
                 continue;
             }
